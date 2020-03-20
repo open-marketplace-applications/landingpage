@@ -1,72 +1,53 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        landingpage
-      </h1>
-      <h2 class="subtitle">
-        Landingpage for the online marketplace application
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <div class="hero">
+      <h1 class="title">hello!</h1>
+      <h2 class="subtitle">Online Markedplace Application</h2>
+      <br />
+      <br />
+      <div>
+        <p>Auch OMA macht mit beim #WirVsVirus und Codet gegen Corona.</p>
+        <router-link class="discover" to="services">
+          Lerne wie du auch in deiner Umgebung helfen kannst!
+        </router-link>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  }
+  components: {}
 }
 </script>
 
 <style>
 .container {
-  margin: 0 auto;
+  padding-top: 20%;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
-
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Heebo', sans-serif;
   display: block;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 100px;
   color: #35495e;
-  letter-spacing: 1px;
 }
-
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
+  color: #35495e;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-
-.links {
-  padding-top: 15px;
+.discover {
+  color: #677380;
 }
 </style>
