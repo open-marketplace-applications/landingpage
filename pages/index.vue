@@ -1,53 +1,89 @@
 <template>
   <div class="container">
-    <div class="hero">
-      <h1 class="title">hello!</h1>
-      <h2 class="subtitle">Online Markedplace Application</h2>
-      <br />
-      <br />
-      <div>
-        <p>Auch OMA macht mit beim #WirVsVirus und Codet gegen Corona.</p>
-        <router-link class="discover" to="services">
-          Lerne wie du auch in deiner Umgebung helfen kannst!
-        </router-link>
 
-      </div>
-    </div>
+  </div>
+</template>
+
+<<template>
+  <div class="page">
+    <Hero />
+    <Content />
+    <Socials />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Hero from '../components/Hero'
+import Content from '../components/Content'
+import Socials from '../components/Socials'
+import Footer from '~/components/Footer.vue'
 export default {
-  components: {}
+  components: { Hero, Content, Socials, Footer },
+  data() {
+    return {
+      url: `${process.env.shopUrl}/en?refLink=${process.env.refAddress}`
+    }
+  }
 }
 </script>
 
-<style>
-.container {
-  padding-top: 20%;
-  font-family: 'Open Sans', sans-serif;
-  height: 100vh;
-  min-height: 100vh;
+<style lang="scss">
+.page {
+  overflow: hidden;
+}
+.btn {
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 100%;
+  height: 40px;
+  padding: 0 30px;
+  background-color: var(--light);
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--transition);
+  img {
+    margin-right: 8px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &--primary {
+    color: var(--white);
+    background-color: var(--primary);
+    &:hover {
+      background-color: var(--primary_light);
+    }
+  }
+}
+.container {
+  padding: 0;
+}
+.logo {
+  height: 15vh;
+  padding-bottom: 20px;
 }
 .title {
-  font-family: 'Heebo', sans-serif;
   display: block;
-  font-weight: 500;
-  font-size: 100px;
-  color: #35495e;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+  font-size: 3.5em;
 }
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  color: #35495e;
+  color: var(--darker);
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-.discover {
-  color: #677380;
+.more {
+  padding-top: 15px;
+  font-size: 1.5em;
+}
+.headline {
+  margin: 30px;
+  margin-top: 50px;
 }
 </style>
