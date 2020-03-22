@@ -1,6 +1,9 @@
 
 module.exports = {
   mode: 'universal',
+  router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/landingpage/' : ''
+  },
   /*
   ** Headers of the page
   */
