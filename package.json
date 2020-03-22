@@ -20,7 +20,8 @@
     "element-ui": "^2.4.11",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
-    "nuxt-i18n": "^6.6.1"
+    "nuxt-i18n": "^6.6.1",
+    "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
