@@ -1,13 +1,17 @@
 <template>
    <div class="hero">
       <img class="oma_hero_img" src="@/assets/oma_hero.svg" alt="">
-      <h1>The next generation of Markedplaces</h1>
+      <h1>The next generation Markedplace</h1>
       <br />
       <div>
-        <p>Auch OMA macht mit beim #WirVsVirus und Codet gegen Corona.</p>
+        <p>Auch OMA macht mit beim #WirVsVirus Hackathon und Codet gegen die Corona Krise.</p>
+        <br />
+        <a href="https://youtu.be/2_Hh50two60" class="discover" target="_blank"> Zum Video</a>
         <br />
         <br />
-        <a href="#" class="discover" v-scroll-to="'#content'"> Lerne mehr</a>
+        <br />
+
+        <a href="#" class="discover" v-scroll-to="'#content'"> Erfahre mehr</a>
       </div>
     </div>
 </template>
