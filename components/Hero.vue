@@ -1,7 +1,7 @@
 <template>
    <div class="hero">
       <img class="oma_hero_img" src="@/assets/oma_hero.svg" alt="">
-      <h1>The next generation Markedplace</h1>
+      <h1>The next generation Marketplace</h1>
       <br />
       <div>
         <p>Auch OMA macht mit beim #WirVsVirus Hackathon und Codet gegen die Corona Krise.</p>
