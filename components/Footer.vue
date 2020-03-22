@@ -51,22 +51,16 @@
       </div>
     </div>
     <div class="row footer-bottom">
-      <div class="footer-bottom-col">© oma</div>
+      <div class="footer-bottom-col">© Online Marketplace Application</div>
       <div class="footer-bottom-col">
         <a
-          href="https://discord.gg/WdfXseU"
+          href="https://discord.gg/XDQQcJC"
           target="_blank"
           class="footer-main-link"
           >Discord</a
         >
         <a
-          href="https://twitter.com/einfachIOTA"
-          target="_blank"
-          class="footer-main-link"
-          >Twitter</a
-        >
-        <a
-          href="https://github.com/einfachiota"
+          href="https://github.com/oma-shop"
           target="_blank"
           class="footer-main-link"
           >Github</a
