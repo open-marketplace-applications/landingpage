@@ -2,8 +2,6 @@
   <div class="socials section">
     <h3>Join the community</h3>
     <p>The Online Marketplace Application is built by an open Community.</p>
-    <br />
-    <br />
     <div class="socials-list">
       <!-- <a href="https://twitter.com/einfachIOTA" target="_blank">
         <img src="~/assets/icons/twitter_large.svg" alt class="social" />
@@ -48,6 +46,7 @@ export default {}
   }
   p {
     color: var(--dark);
+    padding: 30px;
   }
   .socials-list {
     display: flex;
