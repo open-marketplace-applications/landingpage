@@ -3,7 +3,7 @@
     <div class="row">
       <div class="footer-main">
         <router-link to="/" class="footer-logo" exact-active-class="active">
-          <img alt="oma" class="logo" src="../assets/logo.png" />
+          <img alt="oma" class="logo" src="../assets/logo.svg" />
         </router-link>
       </div>
       <div class="footer-main">

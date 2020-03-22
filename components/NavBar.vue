@@ -5,7 +5,7 @@
       class="nav-item nav-item--logo"
       exact-active-class="active"
     >
-      <img alt="oma logo" class="logo" src="@/assets/logo.png" />
+      <img alt="oma logo" class="logo" src="@/assets/logo.svg" />
     </router-link>
 
     <div
@@ -21,14 +21,6 @@
     </div>
 
     <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
-      <router-link
-        v-on:click.native="navStateOpen = false"
-        to="/services"
-        class="nav-item"
-        active-class="active"
-      >
-        <span>Discover</span>
-      </router-link>
     </div>
   </nav>
 </template>
@@ -82,7 +74,6 @@ export default {
     justify-content: center;
     align-items: center;
     color: var(--dark);
-    font-family: 'Roboto Slab';
     font-weight: bold;
     text-decoration: none;
     opacity: 0.75;
@@ -95,7 +86,7 @@ export default {
       opacity: 1;
       img.logo {
         width: auto;
-        height: 70px;
+        height: 100px;
         transition: all 200ms ease-in-out;
       }
     }

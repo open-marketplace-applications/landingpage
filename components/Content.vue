@@ -38,7 +38,7 @@ export default {
           heading: "Shopping",
           description:
             "You can discover local shops on the online marketplace application map. Find new interesting shops, or create your own!",
-          icon: "product.jpg",
+          icon: "city.png",
           list: ["Discover Shops", "Create your own shop", "Read the Shop FAQ"],
           link: {
             text: "Discover Shopping",
@@ -63,14 +63,15 @@ export default {
         },
         {
           layout_inverted: false,
-          heading: "Chatting",
+          heading: "Rewards and more",
           description:
-            "OMA is the regional and global communication center! Citizens can offer their help, post requests or just chat informally. Since the news from OBA and DorfPages are also shown, you are always up to date.",
-          icon: "product.jpg",
+            "OMA is the regional and global communication center! Citizens can offer their help, post requests or just chat informally.",
+          icon: "reward.png",
           list: [
             "Dezentral Chatting",
             "Encrpyted and Secure",
-            "Realtime Question and Answers"
+            "Realtime Question and Answers",
+            "Reward system based on Blockchain Technology"
           ],
           link: {
             text: "Discover Chat",

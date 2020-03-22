@@ -1,9 +1,7 @@
 <template>
    <div class="hero">
-      <h1 class="title">hello!</h1>
-      <h2 class="subtitle">Online Markedplace Application</h2>
-      <br />
-      <br />
+      <h1>The next generation of Markedplaces</h1>
+      <img class="oma_hero_img" src="@/assets/oma_hero.svg" alt="">
       <div>
         <p>Auch OMA macht mit beim #WirVsVirus und Codet gegen Corona.</p>
         <router-link class="discover" to="services">
@@ -25,5 +23,10 @@ export default {
     height: 100vh;
     padding-top: 20%;
     text-align: center;
+}
+
+.oma_hero_img {
+  margin: 50px 20px;
+  height: 10%;
 }
 </style>

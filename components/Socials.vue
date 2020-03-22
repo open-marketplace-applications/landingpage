@@ -35,7 +35,6 @@ export default {}
   }
   h3 {
     color: var(--dark);
-    font-family: 'Open Sans';
     font-weight: 900;
     font-size: 42px;
     margin-bottom: 20px;
