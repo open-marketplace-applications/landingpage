@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper">
+  <div id="content" class="content-wrapper">
     <div v-for="(item, index) in items" :key="index" class="content">
       <div class="container">
         <div v-bind:class="{ inverted: item.layout_inverted }" class="row">
@@ -41,8 +41,8 @@ export default {
           icon: "city.png",
           list: ["Discover Shops", "Create your own shop", "Read the Shop FAQ"],
           link: {
-            text: "Discover Shopping",
-            url: "https://shop.oma.com"
+            text: "Discover Demo",
+            url: "https://oma-shop.github.io/marketplace/"
           }
         },
         {
@@ -57,8 +57,8 @@ export default {
             "Be part with your city!"
           ],
           link: {
-            text: "Discover Delivery",
-            url: "https://blog.oma.com"
+            text: "Demo Soon Delivery",
+            url: ""
           }
         },
         {
@@ -75,7 +75,7 @@ export default {
           ],
           link: {
             text: "Discover Chat",
-            url: "https://chat.oma.com"
+            url: "https://oma-shop.github.io/marketplace/"
           }
         }
       ]
@@ -112,6 +112,10 @@ export default {
   }
   @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
+    .iso-icon {
+    max-width: 10%;
+    margin-bottom: 30px;
+}
   }
 }
 .iso-icon {

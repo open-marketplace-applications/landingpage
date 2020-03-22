@@ -11,33 +11,23 @@
         <div class="divider"></div>
         <!--<a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">Magazin</a>-->
         <a
-          href="https://blog.einfachiota.de/"
+          href="https://www.youtube.com/watch?v=2_Hh50two60"
           target="_blank"
           class="footer-main-link"
         >
-          {{ $t('footer.blog') }}</a
+          Video</a
         >
         <a
-          href="https://shop.einfachiota.de/"
+          href="https://oma-shop.github.io/marketplace/"
           target="_blank"
           class="footer-main-link"
-          >{{ $t('footer.magazine') }}</a
+          >Demo</a
         >
         <a
-          href="https://community.einfachiota.de/"
+          href=https://medium.com/@huhn/a-decentral-social-marketplace-based-on-iota-9f2a4499affc
           target="_blank"
           class="footer-main-link"
-          >{{ $t('footer.community') }}</a
-        >
-      </div>
-      <div class="footer-main">
-        <h4>{{ $t('footer.partners') }}</h4>
-        <div class="divider"></div>
-        <a href="https://tanglebay.org" target="_blank" class="footer-main-link"
-          >Tangle Bay</a
-        >
-        <a href="https://iotashops.com" target="_blank" class="footer-main-link"
-          >einfachIOTA</a
+          >Blog</a
         >
       </div>
       <div class="footer-main">

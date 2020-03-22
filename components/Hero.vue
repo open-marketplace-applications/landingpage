@@ -1,13 +1,12 @@
 <template>
    <div class="hero">
-      <h1>The next generation of Markedplaces</h1>
       <img class="oma_hero_img" src="@/assets/oma_hero.svg" alt="">
+      <h1>The next generation of Markedplaces</h1>
       <div>
         <p>Auch OMA macht mit beim #WirVsVirus und Codet gegen Corona.</p>
-        <router-link class="discover" to="services">
-          Lerne wie du auch in deiner Umgebung helfen kannst!
-        </router-link>
-
+        <br />
+        <br />
+        <a href="#" class="discover" v-scroll-to="'#content'"> Lerne mehr</a>
       </div>
     </div>
 </template>
@@ -28,5 +27,10 @@ export default {
 .oma_hero_img {
   margin: 50px 20px;
   height: 10%;
+}
+
+.discover {
+  margin: 50px;
+  color: var(--secondary)
 }
 </style>
