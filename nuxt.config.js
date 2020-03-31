@@ -2,7 +2,7 @@
 module.exports = {
   mode: 'universal',
   router: {
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/landingpage/' : ''
+    // base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/landingpage/' : '' # this was for github pages (without CNAME)
   },
   /*
   ** Headers of the page
