@@ -9,12 +9,11 @@
       <a href="https://discord.gg/XDQQcJC" target="_blank">
         <img src="~/assets/icons/discord_large.svg" alt class="social" />
       </a>
-      <a
-        href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw"
-        target="_blank"
-      >
-        <!-- <img src="~/assets/icons/youtube_large.svg" alt class="social" /> -->
+      <p>Discord Server to chat with the Team!</p>
+      <a href="https://twitter.com/marketplace_org" target="_blank">
+        <img src="~/assets/icons/twitter_large.svg" alt class="social" />
       </a>
+      <p>Follow us on Twitter!</p>
     </div>
   </div>
 </template>
