@@ -127,8 +127,8 @@ export default {
         font-size: 32px;
       }
       .animated-heading {
-        top: 90%;
-        left: 52%;
+        top: 10%;
+        left: 50%;
       }
       ul li {
         font-size: 18px;
