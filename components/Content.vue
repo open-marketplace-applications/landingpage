@@ -35,14 +35,14 @@ export default {
       items: [
         {
           layout_inverted: false,
-          heading: "Shopping",
+          heading: "Marketplace",
           description:
             "You can discover local shops on the online marketplace application map. Find new interesting shops, or create your own!",
           icon: "city.png",
           list: ["Discover Shops", "Create your own shop", "Read the Shop FAQ"],
           link: {
             text: "Discover Demo",
-            url: "https://oma-shop.github.io/marketplace/"
+            url: "https://open-marketplace-applications.github.io/marketplace"
           }
         },
         {
@@ -57,8 +57,8 @@ export default {
             "Be part with your city!"
           ],
           link: {
-            text: "Demo Soon Delivery",
-            url: ""
+            text: "Demo Delivery (Soon)",
+            url: "http://openmarketplace.org"
           }
         },
         {
@@ -68,14 +68,14 @@ export default {
             "OMA is the regional and global communication center! Citizens can offer their help, post requests or just chat informally.",
           icon: "reward.png",
           list: [
-            "Dezentral Chatting",
+            "Peer2Peer Chatting",
             "Encrpyted and Secure",
             "Realtime Question and Answers",
             "Reward system based on Blockchain Technology"
           ],
           link: {
-            text: "Discover Chat",
-            url: "https://oma-shop.github.io/marketplace/"
+            text: "Discover Chat (Soon)",
+            url: "http://openmarketplace.org"
           }
         }
       ]
