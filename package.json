@@ -21,6 +21,7 @@
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.6.1",
+    "vue-gallery": "^2.0.1",
     "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {

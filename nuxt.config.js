@@ -33,7 +33,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
-    '@/plugins/vue-scrollto.js'
+    '@/plugins/vue-scrollto.js',
+    '@/plugins/vue-gallery.client.js'
   ],
   /*
   ** Nuxt.js dev-modules

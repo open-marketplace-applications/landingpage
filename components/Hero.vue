@@ -4,6 +4,19 @@
     <div class="layer"></div>
     <div class="hello">
       <h1 class="title">Open Marketplace</h1>
+      <p>A Open-Source Marketplace for a Smart City brings the platform in your city.</p>
+      <br />
+      <br />
+      <el-button @click="index = 0" type="primary">Watch the Video</el-button>
+      <client-only>
+        <v-gallery 
+          :images="images" 
+          :index="index" 
+          :options="{youTubeVideoIdProperty: 'youtube', youTubePlayerVars: undefined, youTubeClickToPlay: true}"
+          @close="index = null"
+          ></v-gallery>
+        </client-only>
+
       <div class="animated-heading">
         <div class="animated-heading__container">
           <ul class="animated-heading__container__list">
@@ -24,7 +37,22 @@
 </template>
 
 <script>
-export default {}
+export default {
+    data: function () {
+    return {
+      images: [
+        {
+          title: 'Open Marketplace Applications - An Decentralized Marketplace',
+          href: 'https://www.youtube.com/watch?v=H8EGEsW5eDY',
+          type: 'text/html',
+          youtube: 'H8EGEsW5eDY',
+          poster: 'https://img.youtube.com/vi/H8EGEsW5eDY/maxresdefault.jpg'
+        }
+      ],
+      index: null
+    };
+  }
+}
 </script>
 
 <style lang="scss">
@@ -37,7 +65,7 @@ export default {}
   bottom: 0;
   left: 0;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1000;
   .rounded-edge {
     position: absolute;
     bottom: -2px;
@@ -47,8 +75,8 @@ export default {}
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     filter: blur(5px);
     @media only screen and (min-width: 2200px) {
       height: auto;
@@ -57,18 +85,25 @@ export default {}
   }
   .hello {
     position: absolute;
-    bottom: 10%;
+    bottom: 50%;
     left: 0;
     color: var(--white);
     text-align: left;
     padding: 25px 50px;
     padding-top: 75px;
-    max-width: 50%;
     height: auto;
     border-radius: 0 20px 20px 0;
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
     z-index: 3;
+    .lightbox {
+      float: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid #ebebeb;
+      margin: 5px;
+    }
     h1 {
       color: var(--dark);
       font-family: 'Open Sans';
@@ -102,13 +137,14 @@ export default {}
   }
   video {
     position: absolute;
+    background-size:cover;
     top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     filter: blur(5px);
     @media only screen and (min-width: 2200px) {
-      height: auto;
+      height: 100vh;
       width: 100%;
     }
   }
@@ -136,10 +172,9 @@ export default {}
 }
 .animated-heading {
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 20%;
+  left: 48%;
   transform: translate(-50%, -50%);
-  height: 160px;
   overflow: hidden;
   width: 90%;
   font-size: 2em;
