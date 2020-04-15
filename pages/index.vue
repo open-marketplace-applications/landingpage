@@ -7,6 +7,7 @@
 <<template>
   <div class="page">
     <Hero />
+    <MarketMap />
     <Content />
     <Socials />
     <Footer />
@@ -15,11 +16,12 @@
 
 <script>
 import Hero from '../components/Hero'
+import MarketMap from '../components/MarketMap.vue'
 import Content from '../components/Content'
 import Socials from '../components/Socials'
 import Footer from '~/components/Footer.vue'
 export default {
-  components: { Hero, Content, Socials, Footer },
+  components: { Hero, MarketMap, Content, Socials, Footer },
   data() {
     return {
       url: `${process.env.shopUrl}/en?refLink=${process.env.refAddress}`
