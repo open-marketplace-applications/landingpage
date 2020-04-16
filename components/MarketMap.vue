@@ -16,15 +16,16 @@
               </l-popup>
             </l-marker>
 
-            <l-marker v-for="(shop, index) in shops" :key="index" :icon="iconShop" :lat-lng="shop.location">
+            <l-marker v-for="(shop, index) in shops" :key="'shop-' + index" :icon="iconShop" :lat-lng="[shop.lat, shop.lon]">
               <l-popup>
-                <h3>{{ shop.name }}</h3>
-                <p>{{ shop.description }}</p>
-                <nuxt-link :to="{ path: 'shops', query: { root: shop.root }}">Visit the shop</nuxt-link>
-
+                <h3>{{ shop.tags.name }}</h3>
               </l-popup>
             </l-marker>
-            
+             <l-marker v-for="(pharmacy, index) in pharmacies" :key="'pharmacy-' + index" :icon="iconShop" :lat-lng="[pharmacy.lat, pharmacy.lon]">
+              <l-popup>
+                <h3>{{ pharmacy.tags.name }}</h3>
+              </l-popup>
+            </l-marker>
 
           </l-map>
         </client-only>
@@ -42,7 +43,8 @@ export default {
       zoom: 13,
       center: [52.529797, 13.413094],
       bounds: null,
-      shops: []
+      shops: [],
+      pharmacies: []
     };
   },
   methods: {
@@ -60,14 +62,67 @@ export default {
 
   async created() {
     try {
-      //  const { data } = await this.$axios.get(process.env.cityUrl + '/shops')
-      //   console.log("data", data)
-      //   this.shops = data
-      //   this.shops.forEach(shop => {
-      //     const codeArea = iotaAreaCodes.decode(shop.iac);
-      //     shop.location = [codeArea.latitude, codeArea.longitude]
-      //   });
-        console.log("data", this.shops)
+      let overpass_url = "https://lz4.overpass-api.de/api/interpreter"
+      let overpass_query = `
+        [out:json];
+        area["ISO3166-1"="DE"][admin_level=2];
+        (node["amenity"="marketplace"](area);
+          way["amenity"="marketplace"](area);
+          rel["amenity"="marketplace"](area);
+        );
+        out center;
+      `
+      let res = await this.$axios.get( `${overpass_url}?data=${overpass_query}`)
+
+        console.log("res", res)
+      if(res.data.elements) {
+        this.shops = res.data.elements
+        console.log("shops", this.shops)
+      }
+
+      // overpass_query = `
+      //   [out:json];
+      //   area["ISO3166-1"="DE"][admin_level=2];
+      //   (node["amenity"="pharmacy"](area);
+      //     way["amenity"="pharmacy"](area);
+      //     rel["amenity"="pharmacy"](area);
+      //   );
+      //   out center;
+      // `
+      // res = await this.$axios.get( `${overpass_url}?data=${overpass_query}`)
+      // console.log("pharmacies res", res)
+
+      // if(res.data.elements) {
+      //   this.pharmacies = res.data.elements
+      //   console.log("pharmacies", this.pharmacies)
+      // }
+
+      // 17420 pharmacies
+
+      // Example: 
+  //  {
+  //   type: 'node',
+  //   id: 32508627,
+  //   lat: 50.0012021,
+  //   lon: 9.0676958,
+  //   tags: {
+  //     'addr:city': 'Kleinostheim',
+  //     'addr:housenumber': '60',
+  //     'addr:postcode': '63801',
+  //     'addr:street': 'Goethestraße',
+  //     amenity: 'pharmacy',
+  //     'contact:phone': '+49 6027 6622',
+  //     dispensing: 'yes',
+  //     name: 'Laurentiusapotheke',
+  //     opening_hours: 'Mo-Fr 08:30-12:30,14:30-18:30; We,Sa 08:30-12:30',
+  //     operator: 'Thomas Bsonek',
+  //     website: 'http://www.laurentius-apotheke.net/',
+  //     wheelchair: 'yes'
+  //   }
+  // },
+
+  // https://wiki.openstreetmap.org/wiki/DE:Key:shop
+
     } catch (error) {
       console.log("error fetching marketmap data", error)
     }
