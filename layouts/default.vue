@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <NavBar /> -->
+    <NavBar />
     <nuxt />
   </div>
 </template>
@@ -15,6 +15,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
+
 html {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;

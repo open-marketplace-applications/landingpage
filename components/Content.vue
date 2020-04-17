@@ -4,13 +4,21 @@
       <div class="container">
         <div v-bind:class="{ inverted: item.layout_inverted }" class="row">
           <div class="col center-center">
-            <img :src="require(`../assets/${item.icon}`)" alt class="iso-icon" />
+            <img
+              :src="require(`../assets/${item.icon}`)"
+              alt
+              class="iso-icon"
+            />
           </div>
           <div class="col">
             <h2>{{ item.heading }}</h2>
             <p>{{ item.description }}</p>
             <div class="list">
-              <div v-for="(listItem, i) in item.list" :key="i" class="list__item">
+              <div
+                v-for="(listItem, i) in item.list"
+                :key="i"
+                class="list__item"
+              >
                 <img src="~/assets/icons/caret.svg" alt />
                 <span>{{ listItem }}</span>
               </div>
@@ -113,14 +121,14 @@ export default {
   @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
     .iso-icon {
-    max-width: 10%;
-    margin-bottom: 30px;
-}
+      max-width: 10%;
+      margin-bottom: 30px;
+    }
   }
 }
 .iso-icon {
-    max-width: 80%;
-    margin-bottom: 30px;
+  max-width: 80%;
+  margin-bottom: 30px;
 }
 .col {
   display: flex;

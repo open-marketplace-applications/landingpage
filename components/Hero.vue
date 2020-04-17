@@ -1,6 +1,10 @@
 <template>
   <div class="hero">
-    <img :src="require(`../assets/welcome.svg`)" alt="Welcome" class="welcome" />
+    <img
+      :src="require(`../assets/welcome.svg`)"
+      alt="Welcome"
+      class="welcome"
+    />
     <img
       :src="require(`../assets/hero-illustration.png`)"
       alt="Hero Illustration"
@@ -11,12 +15,18 @@
         <el-col :span="14">
           <h1 class="title">Open Marketplace Applications</h1>
           <p>A decentralised marketplace for smart cities</p>
-          <el-button class="btn btn-primary" @click="index = 0" type="primary">Watch the Video</el-button>
+          <el-button @click="index = 0" class="btn btn-primary" type="primary"
+            >Watch the Video</el-button
+          >
           <client-only>
             <v-gallery
               :images="images"
               :index="index"
-              :options="{youTubeVideoIdProperty: 'youtube', youTubePlayerVars: undefined, youTubeClickToPlay: true}"
+              :options="{
+                youTubeVideoIdProperty: 'youtube',
+                youTubePlayerVars: undefined,
+                youTubeClickToPlay: true
+              }"
               @close="index = null"
             ></v-gallery>
           </client-only>
@@ -29,7 +39,7 @@
 
 <script>
 export default {
-  data: function() {
+  data() {
     return {
       images: [
         {
@@ -54,6 +64,7 @@ export default {
   top: 0;
   left: 0;
   height: 100vh;
+  max-height: 100vw;
   width: 100%;
   background-image: var(--gradient-dark);
   color: var(--white);

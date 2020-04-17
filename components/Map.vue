@@ -2,14 +2,16 @@
   <div id="map-wrap">
     <client-only>
       <l-map
-        class="map"
         :zoom="zoom"
         :center="center"
         @update:zoom="zoomUpdated"
         @update:center="centerUpdated"
         @update:bounds="boundsUpdated"
+        class="map"
       >
-        <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+        <l-tile-layer
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+        ></l-tile-layer>
         <l-marker :icon="iconTarget" :lat-lng="center">
           <l-popup></l-popup>
         </l-marker>
@@ -40,7 +42,7 @@
 </template>
 
 <script>
-const iotaAreaCodes = require("@iota/area-codes");
+// const iotaAreaCodes = require("@iota/area-codes");
 
 export default {
   components: {},
@@ -54,22 +56,33 @@ export default {
       pharmacies: []
     };
   },
-  methods: {
-    zoomUpdated(zoom) {
-      this.zoom = zoom;
+  computed: {
+    iconTarget() {
+      if (process.browser) {
+        require("vue2-leaflet");
+        return L.icon({
+          iconUrl: require("@/assets/icons/crosshair.svg"),
+          iconSize: [40, 40],
+          iconAnchor: [20, 20]
+        });
+      }
     },
-    centerUpdated(center) {
-      this.center = center;
-    },
-    boundsUpdated(bounds) {
-      this.bounds = bounds;
+    iconShop() {
+      if (process.browser) {
+        require("vue2-leaflet");
+        return L.icon({
+          iconUrl: require("@/assets/icons/shop.svg"),
+          iconSize: [40, 40],
+          iconAnchor: [20, 20]
+        });
+      }
     }
   },
 
   async created() {
     try {
-      let overpass_url = "https://lz4.overpass-api.de/api/interpreter";
-      let overpass_query = `
+      const overpass_url = "https://lz4.overpass-api.de/api/interpreter";
+      const overpass_query = `
         [out:json];
         area["ISO3166-1"="DE"][admin_level=2];
         (node["amenity"="marketplace"](area);
@@ -78,12 +91,12 @@ export default {
         );
         out center;
       `;
-      let res = await this.$axios.get(`${overpass_url}?data=${overpass_query}`);
+      const res = await this.$axios.get(
+        `${overpass_url}?data=${overpass_query}`
+      );
 
-      console.log("res", res);
       if (res.data.elements) {
         this.shops = res.data.elements;
-        console.log("shops", this.shops);
       }
 
       // overpass_query = `
@@ -128,12 +141,10 @@ export default {
       // },
 
       // https://wiki.openstreetmap.org/wiki/DE:Key:shop
-    } catch (error) {
-      console.log("error fetching marketmap data", error);
-    }
+    } catch (error) {}
   },
   mounted() {
-    //do we support geolocation
+    // do we support geolocation
     if (!("geolocation" in navigator)) {
       this.errorStr = "Geolocation is not available.";
       return;
@@ -150,30 +161,15 @@ export default {
       }
     );
   },
-  computed: {
-    iconTarget() {
-      if (process.browser) {
-        require("vue2-leaflet");
-        console.log("th", this);
-        console.log("th", L);
-        return L.icon({
-          iconUrl: require("@/assets/icons/target-marker.svg"),
-          iconSize: [40, 40],
-          iconAnchor: [20, 20]
-        });
-      }
+  methods: {
+    zoomUpdated(zoom) {
+      this.zoom = zoom;
     },
-    iconShop() {
-      if (process.browser) {
-        require("vue2-leaflet");
-        console.log("th", this);
-        console.log("th", L);
-        return L.icon({
-          iconUrl: require("@/assets/icons/shop_smal.svg"),
-          iconSize: [40, 40],
-          iconAnchor: [20, 20]
-        });
-      }
+    centerUpdated(center) {
+      this.center = center;
+    },
+    boundsUpdated(bounds) {
+      this.bounds = bounds;
     }
   }
 };
@@ -181,8 +177,14 @@ export default {
 
 <style>
 #map-wrap {
-  height: 50vh;
-  margin-top: 15px;
+  height: calc(100vh - 100px);
+  margin: 0 auto;
+  width: calc(100% - 100px);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -150px;
+  position: relative;
+  z-index: 1000;
 }
 .map {
   height: 100%;
@@ -199,6 +201,9 @@ export default {
   display: block !important;
   margin-right: auto !important;
   margin-left: auto !important;
-  float: none !important; /* Added */
+  float: none !important;
+}
+
+.leaflet-popup {
 }
 </style>

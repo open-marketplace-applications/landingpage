@@ -1,10 +1,18 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
-    <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
+    <router-link
+      to="/"
+      class="nav-item nav-item--logo"
+      exact-active-class="active"
+    >
       <img alt="oma logo" class="logo" src="@/assets/logo.svg" />
     </router-link>
 
-    <div v-bind:class="{ open: navStateOpen }" @click="toggleNav" class="menu-btn-container">
+    <div
+      v-bind:class="{ open: navStateOpen }"
+      @click="toggleNav"
+      class="menu-btn-container"
+    >
       <div class="menu-btn">
         <span class="top"></span>
         <span class="center"></span>
@@ -39,14 +47,12 @@ export default {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 10;
+  z-index: 10000;
   height: 120px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--white);
-  border-bottom: 5px solid var(--primary);
   transition: all 200ms ease-in-out;
   .menu-btn {
     display: none;

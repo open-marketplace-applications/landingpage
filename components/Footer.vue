@@ -7,9 +7,8 @@
         </router-link>
       </div>
       <div class="footer-main">
-        <h4>{{ $t('footer.title') }}</h4>
+        <h4>{{ $t("footer.title") }}</h4>
         <div class="divider"></div>
-        <!--<a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">Magazin</a>-->
         <a
           href="https://www.youtube.com/watch?v=2_Hh50two60"
           target="_blank"
@@ -24,29 +23,29 @@
           >Demo</a
         >
         <a
-          href=https://medium.com/@huhn/a-decentral-social-marketplace-based-on-iota-9f2a4499affc
+          href="https://medium.com/@huhn/a-decentral-social-marketplace-based-on-iota-9f2a4499affc"
           target="_blank"
           class="footer-main-link"
           >Blog</a
         >
       </div>
       <div class="footer-main">
-        <h4>{{ $t('footer.iota_title') }}</h4>
+        <h4>{{ $t("footer.iota_title") }}</h4>
         <div class="divider"></div>
         <a
           href="https://www.iota.org"
           target="_blank"
           class="footer-main-link"
-          >{{ $t('footer.iota_web') }}</a
+          >{{ $t("footer.iota_web") }}</a
         >
         <a
           href="https://blog.iota.org"
           target="_blank"
           class="footer-main-link"
-          >{{ $t('footer.iota_news') }}</a
+          >{{ $t("footer.iota_news") }}</a
         >
         <a href="/#/pages/linkliste" class="footer-main-link">{{
-          $t('footer.iota_more')
+          $t("footer.iota_more")
         }}</a>
       </div>
     </div>
@@ -68,10 +67,10 @@
       </div>
       <div class="footer-bottom-col">
         <router-link to="imprint" class="footer-main-link">{{
-          $t('footer.imprint')
+          $t("footer.imprint")
         }}</router-link>
         <router-link to="privacy" class="footer-main-link">{{
-          $t('footer.privacy_policy')
+          $t("footer.privacy_policy")
         }}</router-link>
       </div>
     </div>
