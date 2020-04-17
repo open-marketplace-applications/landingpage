@@ -3,9 +3,6 @@
     <h3>Join the community</h3>
     <p>The Online Marketplace Application is built by an open Community. Join our Discord server an chat with the Team or follow us on Twitter.</p>
     <div class="socials-list">
-      <!-- <a href="https://twitter.com/einfachIOTA" target="_blank">
-        <img src="~/assets/icons/twitter_large.svg" alt class="social" />
-      </a> -->
       <a href="https://discord.gg/XDQQcJC" target="_blank">
         <img src="~/assets/icons/discord_large.svg" alt class="social" />
       </a>
@@ -17,7 +14,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss">

@@ -1,39 +1,46 @@
 <template>
- <div id="map-wrap">
-        <client-only>
-          <l-map
-            class="map"
-            :zoom="zoom"
-            :center="center"
-            @update:zoom="zoomUpdated"
-            @update:center="centerUpdated"
-            @update:bounds="boundsUpdated"
-          >
-            <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-            <l-marker :icon="iconTarget" :lat-lng="center">
-              <l-popup>
-              
-              </l-popup>
-            </l-marker>
+  <div id="map-wrap">
+    <client-only>
+      <l-map
+        class="map"
+        :zoom="zoom"
+        :center="center"
+        @update:zoom="zoomUpdated"
+        @update:center="centerUpdated"
+        @update:bounds="boundsUpdated"
+      >
+        <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+        <l-marker :icon="iconTarget" :lat-lng="center">
+          <l-popup></l-popup>
+        </l-marker>
 
-            <l-marker v-for="(shop, index) in shops" :key="'shop-' + index" :icon="iconShop" :lat-lng="[shop.lat, shop.lon]">
-              <l-popup>
-                <h3>{{ shop.tags.name }}</h3>
-              </l-popup>
-            </l-marker>
-             <l-marker v-for="(pharmacy, index) in pharmacies" :key="'pharmacy-' + index" :icon="iconShop" :lat-lng="[pharmacy.lat, pharmacy.lon]">
-              <l-popup>
-                <h3>{{ pharmacy.tags.name }}</h3>
-              </l-popup>
-            </l-marker>
-
-          </l-map>
-        </client-only>
-      </div> 
+        <l-marker
+          v-for="(shop, index) in shops"
+          :key="'shop-' + index"
+          :icon="iconShop"
+          :lat-lng="[shop.lat, shop.lon]"
+        >
+          <l-popup>
+            <h3>{{ shop.tags.name }}</h3>
+          </l-popup>
+        </l-marker>
+        <l-marker
+          v-for="(pharmacy, index) in pharmacies"
+          :key="'pharmacy-' + index"
+          :icon="iconShop"
+          :lat-lng="[pharmacy.lat, pharmacy.lon]"
+        >
+          <l-popup>
+            <h3>{{ pharmacy.tags.name }}</h3>
+          </l-popup>
+        </l-marker>
+      </l-map>
+    </client-only>
+  </div>
 </template>
 
 <script>
-const iotaAreaCodes = require('@iota/area-codes');
+const iotaAreaCodes = require("@iota/area-codes");
 
 export default {
   components: {},
@@ -53,7 +60,6 @@ export default {
     },
     centerUpdated(center) {
       this.center = center;
-      
     },
     boundsUpdated(bounds) {
       this.bounds = bounds;
@@ -62,7 +68,7 @@ export default {
 
   async created() {
     try {
-      let overpass_url = "https://lz4.overpass-api.de/api/interpreter"
+      let overpass_url = "https://lz4.overpass-api.de/api/interpreter";
       let overpass_query = `
         [out:json];
         area["ISO3166-1"="DE"][admin_level=2];
@@ -71,13 +77,13 @@ export default {
           rel["amenity"="marketplace"](area);
         );
         out center;
-      `
-      let res = await this.$axios.get( `${overpass_url}?data=${overpass_query}`)
+      `;
+      let res = await this.$axios.get(`${overpass_url}?data=${overpass_query}`);
 
-        console.log("res", res)
-      if(res.data.elements) {
-        this.shops = res.data.elements
-        console.log("shops", this.shops)
+      console.log("res", res);
+      if (res.data.elements) {
+        this.shops = res.data.elements;
+        console.log("shops", this.shops);
       }
 
       // overpass_query = `
@@ -99,80 +105,75 @@ export default {
 
       // 17420 pharmacies
 
-      // Example: 
-  //  {
-  //   type: 'node',
-  //   id: 32508627,
-  //   lat: 50.0012021,
-  //   lon: 9.0676958,
-  //   tags: {
-  //     'addr:city': 'Kleinostheim',
-  //     'addr:housenumber': '60',
-  //     'addr:postcode': '63801',
-  //     'addr:street': 'Goethestraße',
-  //     amenity: 'pharmacy',
-  //     'contact:phone': '+49 6027 6622',
-  //     dispensing: 'yes',
-  //     name: 'Laurentiusapotheke',
-  //     opening_hours: 'Mo-Fr 08:30-12:30,14:30-18:30; We,Sa 08:30-12:30',
-  //     operator: 'Thomas Bsonek',
-  //     website: 'http://www.laurentius-apotheke.net/',
-  //     wheelchair: 'yes'
-  //   }
-  // },
+      // Example:
+      //  {
+      //   type: 'node',
+      //   id: 32508627,
+      //   lat: 50.0012021,
+      //   lon: 9.0676958,
+      //   tags: {
+      //     'addr:city': 'Kleinostheim',
+      //     'addr:housenumber': '60',
+      //     'addr:postcode': '63801',
+      //     'addr:street': 'Goethestraße',
+      //     amenity: 'pharmacy',
+      //     'contact:phone': '+49 6027 6622',
+      //     dispensing: 'yes',
+      //     name: 'Laurentiusapotheke',
+      //     opening_hours: 'Mo-Fr 08:30-12:30,14:30-18:30; We,Sa 08:30-12:30',
+      //     operator: 'Thomas Bsonek',
+      //     website: 'http://www.laurentius-apotheke.net/',
+      //     wheelchair: 'yes'
+      //   }
+      // },
 
-  // https://wiki.openstreetmap.org/wiki/DE:Key:shop
-
+      // https://wiki.openstreetmap.org/wiki/DE:Key:shop
     } catch (error) {
-      console.log("error fetching marketmap data", error)
+      console.log("error fetching marketmap data", error);
     }
-       
-
   },
-   mounted() {
-        //do we support geolocation
-        if (!("geolocation" in navigator)) {
-          this.errorStr = "Geolocation is not available.";
-          return;
-        }
-        // get position
-        navigator.geolocation.getCurrentPosition(
-          pos => {
-            this.center = L.latLng(pos.coords.latitude, pos.coords.longitude);
-            this.gettingLocation = true;
-          },
-          err => {
-            this.gettingLocation = false;
-            this.errorStr = err.message;
-          }
-        );
+  mounted() {
+    //do we support geolocation
+    if (!("geolocation" in navigator)) {
+      this.errorStr = "Geolocation is not available.";
+      return;
+    }
+    // get position
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        this.center = L.latLng(pos.coords.latitude, pos.coords.longitude);
+        this.gettingLocation = true;
       },
+      err => {
+        this.gettingLocation = false;
+        this.errorStr = err.message;
+      }
+    );
+  },
   computed: {
     iconTarget() {
-        
-    if (process.browser) {
-      require('vue2-leaflet');
-      console.log("th", this)
-      console.log("th", L)
-      return L.icon({
-        iconUrl: require('@/assets/icons/target-marker.svg'),
-        iconSize: [40, 40],
-        iconAnchor: [20, 20]
-      })
-        }
+      if (process.browser) {
+        require("vue2-leaflet");
+        console.log("th", this);
+        console.log("th", L);
+        return L.icon({
+          iconUrl: require("@/assets/icons/target-marker.svg"),
+          iconSize: [40, 40],
+          iconAnchor: [20, 20]
+        });
+      }
     },
     iconShop() {
-        
-    if (process.browser) {
-      require('vue2-leaflet');
-      console.log("th", this)
-      console.log("th", L)
-      return L.icon({
-        iconUrl: require('@/assets/icons/shop_smal.svg'),
-        iconSize: [40, 40],
-        iconAnchor: [20, 20]
-      })
-        }
+      if (process.browser) {
+        require("vue2-leaflet");
+        console.log("th", this);
+        console.log("th", L);
+        return L.icon({
+          iconUrl: require("@/assets/icons/shop_smal.svg"),
+          iconSize: [40, 40],
+          iconAnchor: [20, 20]
+        });
+      }
     }
   }
 };

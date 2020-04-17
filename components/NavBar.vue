@@ -1,18 +1,10 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
-    <router-link
-      to="/"
-      class="nav-item nav-item--logo"
-      exact-active-class="active"
-    >
+    <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
       <img alt="oma logo" class="logo" src="@/assets/logo.svg" />
     </router-link>
 
-    <div
-      v-bind:class="{ open: navStateOpen }"
-      @click="toggleNav"
-      class="menu-btn-container"
-    >
+    <div v-bind:class="{ open: navStateOpen }" @click="toggleNav" class="menu-btn-container">
       <div class="menu-btn">
         <span class="top"></span>
         <span class="center"></span>
@@ -20,8 +12,7 @@
       </div>
     </div>
 
-    <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
-    </div>
+    <div v-bind:class="{ open: navStateOpen }" class="nav-menu"></div>
   </nav>
 </template>
 
@@ -30,14 +21,14 @@ export default {
   data() {
     return {
       navStateOpen: false
-    }
+    };
   },
   methods: {
     toggleNav() {
-      this.navStateOpen = !this.navStateOpen
+      this.navStateOpen = !this.navStateOpen;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -91,7 +82,7 @@ export default {
       }
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: -5px;
       height: 10px;
@@ -105,7 +96,7 @@ export default {
       background-color: var(--black_5);
       color: var(--primary);
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: -5px;
         bottom: -5px;
