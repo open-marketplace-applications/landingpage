@@ -62,21 +62,21 @@ export default {
     position: absolute;
     top: 50px;
     left: 50px;
-    opacity: 0.25;
+    opacity: 0.15;
     width: 80%;
   }
 
   .illustration {
     position: absolute;
     bottom: calc(10% + 100px);
-    right: 150px;
+    right: 10%;
     width: 700px;
   }
 
   h1 {
     font-family: "Open Sans";
     font-weight: 800;
-    font-size: 52px;
+    font-size: 62px;
     line-height: 1.15;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -84,7 +84,7 @@ export default {
 
   .container {
     width: 1200px;
-    margin-top: 175px;
+    margin-top: 10%;
   }
 
   .btn {
