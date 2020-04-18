@@ -95,6 +95,7 @@ export default {
 
   .container {
     width: 1200px;
+    margin: 0 auto;
     margin-top: 10%;
   }
 

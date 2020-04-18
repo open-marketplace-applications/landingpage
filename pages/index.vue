@@ -2,7 +2,7 @@
   <div class="page">
     <Hero />
     <Map />
-    <Content />
+    <!-- <Content /> -->
     <Socials />
     <Footer />
   </div>
@@ -11,11 +11,10 @@
 <script>
 import Hero from "../components/Hero";
 import Map from "../components/Map.vue";
-import Content from "../components/Content";
 import Socials from "../components/Socials";
 import Footer from "~/components/Footer.vue";
 export default {
-  components: { Hero, Map, Content, Socials, Footer },
+  components: { Hero, Map, Socials, Footer },
   data() {
     return {
       url: `${process.env.shopUrl}/en?refLink=${process.env.refAddress}`

@@ -27,12 +27,12 @@ export default {};
   justify-content: center;
   align-items: center;
   padding: 100px;
-  background-color: var(--light);
+  background-color: var(--darker);
+  color: var(--white);
   @media only screen and (max-width: 520px) {
     padding: 50px 0;
   }
   h3 {
-    color: var(--dark);
     font-weight: 900;
     font-size: 42px;
     margin-bottom: 20px;
@@ -42,7 +42,6 @@ export default {};
     }
   }
   p {
-    color: var(--dark);
     padding: 30px;
     text-align: center;
   }

@@ -49,7 +49,7 @@ button {
   --white: #ffffff;
   --light: #edf7f2;
   --dark: #193f43;
-  --darker: #020202;
+  --darker: #122b2e;
   --gradient-dark: linear-gradient(
     to right bottom,
     #193f43,
