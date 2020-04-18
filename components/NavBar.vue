@@ -1,11 +1,7 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="nav">
     <div class="nav__primary">
-      <router-link
-        to="/"
-        class="nav-item nav-item--logo"
-        exact-active-class="active"
-      >
+      <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
         <img alt="oma logo" class="logo" src="@/assets/logo.svg" />
       </router-link>
       <div @click="navStateOpen = !navStateOpen" class="mobile-btn">
@@ -16,11 +12,7 @@
       <div class="menu"></div>
     </div>
 
-    <div
-      v-bind:class="{ open: navStateOpen }"
-      @click="toggleNav"
-      class="menu-btn-container"
-    >
+    <div v-bind:class="{ open: navStateOpen }" @click="toggleNav" class="menu-btn-container">
       <div class="menu-btn">
         <span class="top"></span>
         <span class="center"></span>
@@ -36,7 +28,7 @@
           </div>
           <div class="menu__item">
             <a href="https://blog.einfachIOTA.de" target="_blank">Blog</a>
-          </div> -->
+          </div>-->
         </div>
         <div class="socials">
           <div class="socials__item">
@@ -50,10 +42,7 @@
             </a>
           </div>
           <div class="socials__item">
-            <a
-              href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw"
-              target="_blank"
-            >
+            <a href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw" target="_blank">
               <img src="~/assets/icons/youtube_large.svg" alt />
             </a>
           </div>
@@ -246,7 +235,7 @@ export default {
     width: auto;
   }
 }
-@media only screen and (max-width: 720px) {
+/* @media only screen and (max-width: 720px) {
   img.logo {
     height: 50px !important;
   }
@@ -359,5 +348,5 @@ export default {
       }
     }
   }
-}
+} */
 </style>
