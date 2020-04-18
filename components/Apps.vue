@@ -105,9 +105,9 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .content {
-  background-color: var(--dark);
+  background-color: var(--darker);
   color: var(--white);
   padding: 150px 0;
   @media only screen and (max-width: 1240px) {
