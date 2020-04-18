@@ -9,6 +9,12 @@
         @update:bounds="boundsUpdated"
         class="map"
       >
+        <div class="search-wrapper">
+          <div class="icon-wrapper">
+            <img src="@/assets/icons/search.svg" alt="" class="icon" />
+          </div>
+          <input type="text" placeholder="Find your marketplace" />
+        </div>
         <l-tile-layer
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
         ></l-tile-layer>
@@ -175,21 +181,56 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #map-wrap {
   height: calc(100vh - 100px);
+  max-height: 100vw;
+  width: 100%;
   margin: 0 auto;
-  width: calc(100% - 100px);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: -150px;
+  padding-bottom: 50px;
+  background-color: var(--dark);
+}
+
+.map {
   position: relative;
   z-index: 1000;
-}
-.map {
+  overflow: hidden;
   height: 100%;
-  width: 100%;
+  width: auto !important;
+  margin: 0 50px;
+  margin-top: -150px;
+  border-radius: 10px;
 }
+
+.search-wrapper {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  height: 50px;
+  z-index: 1000;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  border-radius: var(--radius);
+  overflow: hidden;
+  .icon-wrapper {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    padding-left: 62px;
+    padding-right: 12px;
+    font-size: 14px;
+    min-width: 260px;
+  }
+}
+
 .spots {
   padding-top: 80px;
   padding-bottom: 20px;
@@ -202,8 +243,5 @@ export default {
   margin-right: auto !important;
   margin-left: auto !important;
   float: none !important;
-}
-
-.leaflet-popup {
 }
 </style>
