@@ -12,10 +12,10 @@
     />
     <div class="container">
       <el-row>
-        <el-col :span="14">
-          <h1 class="title">Open Marketplace Applications</h1>
+        <el-col :span="12">
+          <h1 class="title">Open Marketplace</h1>
           <p>A decentralised marketplace for smart cities</p>
-          <el-button @click="index = 0" class="btn btn-primary" type="primary"
+          <el-button @click="index = 0" class="btn btn-primary"
             >Watch the Video</el-button
           >
           <client-only>
@@ -31,7 +31,7 @@
             ></v-gallery>
           </client-only>
         </el-col>
-        <el-col :span="10"></el-col>
+        <el-col :span="12"></el-col>
       </el-row>
     </div>
   </div>
@@ -96,14 +96,6 @@ export default {
   .container {
     width: 1200px;
     margin-top: 10%;
-  }
-
-  .btn {
-    background-image: var(--gradient-primary);
-    font-size: 16px;
-    padding: 16px 32px;
-    height: auto;
-    margin-top: 30px;
   }
 
   video {

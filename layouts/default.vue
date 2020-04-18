@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
 
 html {
@@ -70,6 +70,28 @@ button {
   --weight-regular: 400;
   --radius: 10px;
   --transition: all 0.3s ease-in-out;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  padding: 16px 32px;
+  height: auto;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: var(--transition);
+  cursor: pointer;
+  &-primary {
+    color: var(--white);
+    background-color: var(--primary);
+    &:hover {
+      color: var(--white);
+      background-color: var(--primary-light);
+    }
+  }
 }
 
 /* width */
