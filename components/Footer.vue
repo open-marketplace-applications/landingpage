@@ -79,13 +79,13 @@
 
 <style lang="scss">
 .footer {
-  background-color: var(--white);
+  background-color: var(--darker);
   width: 100%;
-  padding: 50px 50px 0;
+  padding: 20px 20px 0;
   box-sizing: border-box;
   text-align: center;
-  border-top: 5px solid var(--primary);
-  color: var(--dark);
+  border-top: 5px solid var(--dark);
+  color: var(--white);
   .row {
     display: flex;
     justify-content: space-between;
@@ -113,22 +113,23 @@
     }
     .footer-main-link {
       display: block;
-      color: var(--dark);
+      color: var(--white);
       margin: 0;
       line-height: 2;
       font-size: 16px;
       text-decoration: none;
-      transition: color 200ms ease-in-out;
+      transition: var(--transition);
       &:hover {
         color: var(--primary);
       }
     }
   }
   .footer-bottom {
-    padding: 15px 50px;
-    margin: 0 -50px;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.25);
-    color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    margin: 0 !important;
+    padding: 15px 0;
+    border-top: 1px solid var(--dark);
+    color: var(--white);
     .footer-bottom-col {
       .footer-main-link {
         margin: 0 10px;
@@ -141,7 +142,7 @@
       }
     }
     .footer-main-link {
-      color: rgba(0, 0, 0, 0.75);
+      color: rgba(255, 255, 255, 0.5);
       text-decoration: none;
       transition: color 200ms ease-in-out;
       &:hover {
