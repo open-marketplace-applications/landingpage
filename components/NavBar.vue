@@ -1,7 +1,11 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="nav">
     <div class="nav__primary">
-      <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
+      <router-link
+        to="/"
+        class="nav-item nav-item--logo"
+        exact-active-class="active"
+      >
         <img alt="oma logo" class="logo" src="@/assets/logo.svg" />
       </router-link>
       <div @click="navStateOpen = !navStateOpen" class="mobile-btn">
@@ -12,24 +16,8 @@
       <div class="menu"></div>
     </div>
 
-    <div v-bind:class="{ open: navStateOpen }" @click="toggleNav" class="menu-btn-container">
-      <div class="menu-btn">
-        <span class="top"></span>
-        <span class="center"></span>
-        <span class="bottom"></span>
-      </div>
-    </div>
-
     <div class="nav__secondary">
       <div class="nav__meta">
-        <div class="menu">
-          <!-- <div class="menu__item active">
-            <a href="/">Home</a>
-          </div>
-          <div class="menu__item">
-            <a href="https://blog.einfachIOTA.de" target="_blank">Blog</a>
-          </div>-->
-        </div>
         <div class="socials">
           <div class="socials__item">
             <a href="https://twitter.com/einfachIOTA" target="_blank">

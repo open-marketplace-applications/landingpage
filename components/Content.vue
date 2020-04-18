@@ -105,6 +105,7 @@ export default {
     padding: 80px 20px;
   }
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;

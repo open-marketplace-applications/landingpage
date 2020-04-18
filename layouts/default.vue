@@ -43,6 +43,10 @@ button {
   font-weight: 800;
 }
 
+p {
+  line-height: 1.5;
+}
+
 :root {
   --primary: #4cb6c2;
   --primary-light: #7fc7bd;
@@ -83,6 +87,7 @@ button {
   text-decoration: none;
   border-radius: 50px;
   transition: var(--transition);
+  text-decoration: none;
   cursor: pointer;
   &-primary {
     color: var(--white);
