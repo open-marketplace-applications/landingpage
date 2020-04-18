@@ -1,77 +1,12 @@
 <template>
   <div class="footer">
-    <div class="row">
-      <div class="footer-main">
-        <router-link to="/" class="footer-logo" exact-active-class="active">
-          <img alt="oma" class="logo" src="../assets/logo.svg" />
-        </router-link>
-      </div>
-      <div class="footer-main">
-        <h4>{{ $t("footer.title") }}</h4>
-        <div class="divider"></div>
-        <a
-          href="https://www.youtube.com/watch?v=2_Hh50two60"
-          target="_blank"
-          class="footer-main-link"
-        >
-          Video</a
-        >
-        <a
-          href="https://oma-shop.github.io/marketplace/"
-          target="_blank"
-          class="footer-main-link"
-          >Demo</a
-        >
-        <a
-          href="https://medium.com/@huhn/a-decentral-social-marketplace-based-on-iota-9f2a4499affc"
-          target="_blank"
-          class="footer-main-link"
-          >Blog</a
-        >
-      </div>
-      <div class="footer-main">
-        <h4>{{ $t("footer.iota_title") }}</h4>
-        <div class="divider"></div>
-        <a
-          href="https://www.iota.org"
-          target="_blank"
-          class="footer-main-link"
-          >{{ $t("footer.iota_web") }}</a
-        >
-        <a
-          href="https://blog.iota.org"
-          target="_blank"
-          class="footer-main-link"
-          >{{ $t("footer.iota_news") }}</a
-        >
-        <a href="/#/pages/linkliste" class="footer-main-link">{{
-          $t("footer.iota_more")
-        }}</a>
-      </div>
-    </div>
     <div class="row footer-bottom">
       <div class="footer-bottom-col">© Online Marketplace Application</div>
       <div class="footer-bottom-col">
-        <a
-          href="https://discord.gg/XDQQcJC"
-          target="_blank"
-          class="footer-main-link"
-          >Discord</a
+        <router-link to="imprint" class="footer-main-link">Imprint</router-link>
+        <router-link to="privacy" class="footer-main-link"
+          >Privacy Policy</router-link
         >
-        <a
-          href="https://github.com/oma-shop"
-          target="_blank"
-          class="footer-main-link"
-          >Github</a
-        >
-      </div>
-      <div class="footer-bottom-col">
-        <router-link to="imprint" class="footer-main-link">{{
-          $t("footer.imprint")
-        }}</router-link>
-        <router-link to="privacy" class="footer-main-link">{{
-          $t("footer.privacy_policy")
-        }}</router-link>
       </div>
     </div>
   </div>
@@ -84,7 +19,6 @@
   padding: 20px 20px 0;
   box-sizing: border-box;
   text-align: center;
-  border-top: 5px solid var(--dark);
   color: var(--white);
   .row {
     display: flex;
