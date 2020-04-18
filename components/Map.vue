@@ -200,6 +200,7 @@ export default {
   margin: 0 50px;
   margin-top: -150px;
   border-radius: 10px;
+  pointer-events: none;
 }
 
 .search-wrapper {
