@@ -6,20 +6,15 @@
           <el-col :sm="24" :md="12" :lg="10">
             <h2>Join us</h2>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr.
+             Do you also want an Open Marketplace in your City? No Problem! Just join our Discord Chat Server and aks in the #marketplace-request channel for more information. This project is huge and the applications get continuously improved by community feedback. We currently building many decentralized teams all over the world - it's would be cool if you become a part of it and help with any contribution!
             </p>
             <h3>Regional Marketplace Leader</h3>
             <p>
-              Mache dies mache das, gucke rechts gucke links.
+             Manages the Open Marketplace in a city and takes care of the local community.
             </p>
             <h3>Contributor</h3>
             <p>
-              Mache dies mache das, gucke rechts gucke links.
+              They help to improve the project with contributions of any kind.
             </p>
           </el-col>
           <el-col :sm="24" :md="12" :lg="14" class="discord-icon">
