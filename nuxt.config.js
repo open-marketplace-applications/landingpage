@@ -7,14 +7,14 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Online Marketplace Application",
+    title: "Online Marketplace Applications",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "The next generation Marketplace"
+        content: "A free and feeless marketplace for a smart city - Connect sellers, delivery services & consumers"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
