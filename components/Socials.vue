@@ -1,16 +1,15 @@
 <template>
   <div class="socials section">
-    <h3>Join the community</h3>
-    <p>
-      The Online Marketplace Application is built by an open Community. Join our
-      Discord server an chat with the Team or follow us on Twitter.
-    </p>
+    <h3>Follow us</h3>
     <div class="socials-list">
       <a href="https://discord.gg/XDQQcJC" target="_blank">
-        <img src="~/assets/icons/discord_large.svg" alt class="social" />
+        <img src="~/assets/icons/youtube_large.svg" alt class="social" />
       </a>
       <a href="https://twitter.com/marketplace_org" target="_blank">
         <img src="~/assets/icons/twitter_large.svg" alt class="social" />
+      </a>
+      <a href="https://twitter.com/marketplace_org" target="_blank">
+        <img src="~/assets/icons/medium.svg" alt class="social" />
       </a>
     </div>
   </div>

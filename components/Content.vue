@@ -106,13 +106,6 @@ export default {
   }
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  @media only screen and (max-width: 1240px) {
-    width: 100%;
-  }
-}
 .row {
   display: flex;
   margin: 0 -25px;
@@ -203,14 +196,6 @@ h2 {
     text-decoration: none;
     a {
       cursor: not-allowed;
-    }
-  }
-  @media only screen and (max-width: 1240px) {
-    .content {
-      .container {
-        width: 100%;
-        margin: 0 20px;
-      }
     }
   }
 }

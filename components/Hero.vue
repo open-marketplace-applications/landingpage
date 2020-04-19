@@ -12,7 +12,7 @@
     />
     <div class="container">
       <el-row>
-        <el-col :span="12">
+        <el-col :span="24" :md="12">
           <h1 class="title">Open Marketplace</h1>
           <p>A decentralised marketplace for smart cities</p>
           <el-button @click="index = 0" class="btn btn-primary"
@@ -28,10 +28,11 @@
                 youTubeClickToPlay: true
               }"
               @close="index = null"
+              class="hero-video"
             ></v-gallery>
           </client-only>
         </el-col>
-        <el-col :span="12"></el-col>
+        <el-col :span="0" :md="12"></el-col>
       </el-row>
     </div>
   </div>
@@ -64,14 +65,14 @@ export default {
   top: 0;
   left: 0;
   height: 100vh;
-  max-height: 100vw;
+  max-height: 100vh;
   width: 100%;
   background-image: var(--gradient-dark);
   color: var(--white);
 
   .welcome {
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 50px;
     opacity: 0.15;
     width: 80%;
@@ -82,6 +83,15 @@ export default {
     bottom: calc(10% + 100px);
     right: 10%;
     width: 700px;
+    @media only screen and (max-width: 800px) {
+      width: 500px;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 400px;
+    }
+    @media only screen and (max-width: 400px) {
+      width: 300px;
+    }
   }
 
   h1 {
@@ -91,12 +101,22 @@ export default {
     line-height: 1.15;
     margin-bottom: 10px;
     text-transform: uppercase;
+    @media only screen and (max-width: 550px) {
+      font-size: 48px;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 32px;
+    }
   }
 
   .container {
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 22%;
+    @media only screen and (max-width: 500px) {
+      margin-top: 24%;
+    }
+    @media only screen and (max-width: 400px) {
+      margin-top: 26%;
+    }
   }
 
   video {

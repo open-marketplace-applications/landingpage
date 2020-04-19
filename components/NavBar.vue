@@ -20,7 +20,7 @@
       <div class="nav__meta">
         <div class="socials">
           <div class="socials__item">
-            <a href="https://twitter.com/einfachIOTA" target="_blank">
+            <a href="https://twitter.com/marketplace_org" target="_blank">
               <img src="~/assets/icons/twitter_large.svg" alt />
             </a>
           </div>
@@ -30,7 +30,10 @@
             </a>
           </div>
           <div class="socials__item">
-            <a href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw" target="_blank">
+            <a
+              href="https://www.youtube.com/channel/UClTOkIEAwmYLV7SRtMKP9gQ"
+              target="_blank"
+            >
               <img src="~/assets/icons/youtube_large.svg" alt />
             </a>
           </div>

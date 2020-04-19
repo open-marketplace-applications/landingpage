@@ -184,7 +184,7 @@ export default {
 <style lang="scss">
 #map-wrap {
   height: calc(100vh - 100px);
-  max-height: 100vw;
+  max-height: 100vh;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 50px;
@@ -201,6 +201,10 @@ export default {
   margin-top: -150px;
   border-radius: 10px;
   pointer-events: none;
+  @media only screen and (max-width: 500px) {
+    margin: 0 20px;
+    margin-top: -70px;
+  }
 }
 
 .search-wrapper {

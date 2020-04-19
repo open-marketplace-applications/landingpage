@@ -3,7 +3,7 @@
     <div class="content">
       <div class="container">
         <el-row>
-          <el-col :span="10">
+          <el-col :sm="24" :md="12" :lg="10">
             <h2>Join us</h2>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -22,7 +22,7 @@
               Mache dies mache das, gucke rechts gucke links.
             </p>
           </el-col>
-          <el-col :span="14" class="discord-icon">
+          <el-col :sm="24" :md="12" :lg="14" class="discord-icon">
             <img src="~/assets/icons/discord_large.svg" alt="discord" />
             <el-button class="btn btn-primary">Jump right in</el-button>
           </el-col>
@@ -48,19 +48,17 @@
   }
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  @media only screen and (max-width: 1240px) {
-    width: 100%;
-  }
-}
-
 .discord-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  img {
+    height: 200px;
+  }
+  @media only screen and (max-width: 992px) {
+    margin-top: 50px;
+  }
 }
 
 h2 {

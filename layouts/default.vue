@@ -99,6 +99,16 @@ p {
   }
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  @media only screen and (max-width: 1240px) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
