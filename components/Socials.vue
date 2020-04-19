@@ -8,7 +8,7 @@
       <a href="https://twitter.com/marketplace_org" target="_blank">
         <img src="~/assets/icons/twitter_large.svg" alt class="social" />
       </a>
-      <a href="https://discord.gg/XDQQcJC" target="_blank">
+      <a href="https://medium.com/open-marketplace-applications" target="_blank">
         <img src="~/assets/icons/medium.svg" alt class="social" />
       </a>
     </div>

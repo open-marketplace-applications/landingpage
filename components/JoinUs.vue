@@ -18,8 +18,10 @@
             </p>
           </el-col>
           <el-col :sm="24" :md="12" :lg="14" class="discord-icon">
+            <a href="https://discord.gg/XDQQcJC" target="_blank">
             <img src="~/assets/icons/discord_large.svg" alt="discord" />
-            <el-button class="btn btn-primary">Jump right in</el-button>
+            </a>
+            <a href="https://discord.gg/XDQQcJC" target="_blank" class="btn btn-primary">Jump right in</a>
           </el-col>
         </el-row>
       </div>
