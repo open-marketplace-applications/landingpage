@@ -16,7 +16,7 @@
           <h1 class="title">Open Marketplace</h1>
           <p>A decentralised marketplace for smart cities</p>
           <el-button @click="index = 0" class="btn btn-primary"
-            >Watch the Video</el-button
+            >Watch the Videos</el-button
           >
           <client-only>
             <v-gallery
