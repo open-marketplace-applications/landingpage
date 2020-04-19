@@ -44,11 +44,25 @@ export default {
     return {
       images: [
         {
+          title: "Open Marketplace Applications - Introduction - Connect sellers, delivery services & consumers",
+          href: "https://www.youtube.com/watch?v=Jbj4iwSlKZY&t",
+          type: "text/mp4",
+          youtube: "Jbj4iwSlKZY",
+          poster: "https://img.youtube.com/vi/Jbj4iwSlKZY/maxresdefault.jpg"
+        },
+         {
           title: "Open Marketplace Applications - An Decentralized Marketplace",
           href: "https://www.youtube.com/watch?v=H8EGEsW5eDY",
-          type: "text/html",
+          type: "text/mp4",
           youtube: "H8EGEsW5eDY",
           poster: "https://img.youtube.com/vi/H8EGEsW5eDY/maxresdefault.jpg"
+        },
+         {
+          title: "Open Marketplace - First Open Platform as a Platform",
+          href: "https://www.youtube.com/watch?v=5sM3RN3WKtg",
+          type: "text/mp4",
+          youtube: "5sM3RN3WKtg",
+          poster: "https://img.youtube.com/vi/5sM3RN3WKtg/maxresdefault.jpg"
         }
       ],
       index: null
