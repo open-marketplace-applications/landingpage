@@ -4,24 +4,20 @@
       <l-map
         :zoom="zoom"
         :center="center"
-        @update:zoom="zoomUpdated"
         @update:center="centerUpdated"
         @update:bounds="boundsUpdated"
         class="map"
+        scrollWheelZoom="false" 
       >
-        <div class="search-wrapper">
+        <!-- <div class="search-wrapper">
           <div class="icon-wrapper">
             <img src="@/assets/icons/search.svg" alt="" class="icon" />
           </div>
           <input type="text" placeholder="Find your marketplace" />
-        </div>
+        </div> -->
         <l-tile-layer
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
         ></l-tile-layer>
-        <l-marker :icon="iconTarget" :lat-lng="center">
-          <l-popup></l-popup>
-        </l-marker>
-
         <l-marker
           v-for="(shop, index) in shops"
           :key="'shop-' + index"
@@ -55,7 +51,7 @@ export default {
   data() {
     return {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
-      zoom: 13,
+      zoom: 11,
       center: [52.529797, 13.413094],
       bounds: null,
       shops: [],
@@ -154,18 +150,19 @@ export default {
     if (!("geolocation" in navigator)) {
       this.errorStr = "Geolocation is not available.";
       return;
+    } else {
+      // // get position from browser
+      // navigator.geolocation.getCurrentPosition(
+      //   pos => {
+      //     this.center = L.latLng(pos.coords.latitude, pos.coords.longitude);
+      //     this.gettingLocation = true;
+      //   },
+      //   err => {
+      //     this.gettingLocation = false;
+      //     this.errorStr = err.message;
+      //   }
+      // );
     }
-    // get position
-    navigator.geolocation.getCurrentPosition(
-      pos => {
-        this.center = L.latLng(pos.coords.latitude, pos.coords.longitude);
-        this.gettingLocation = true;
-      },
-      err => {
-        this.gettingLocation = false;
-        this.errorStr = err.message;
-      }
-    );
   },
   methods: {
     zoomUpdated(zoom) {
