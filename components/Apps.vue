@@ -1,18 +1,18 @@
 <template>
-  <div id="content" class="content-wrapper">
-    <div class="content">
-      <div class="container">
-        <el-row>
-          <el-col :sm="24" :md="24" :lg="8">
-            <h2>Apps</h2>
-            <p>
-              The open marketplace can be combined with many open applications.
-              All of tem are dezentral and free to use - you can host them for
-              yourself, of use the Open Cloud to host it.
-            </p>
-          </el-col>
-          <el-col :sm="24" :md="24" :lg="16">
-            <div class="apps-wrapper">
+  <Section>
+    <Container>
+      <Row>
+        <Column :width="4">
+          <H2>Apps</H2>
+          <P
+            >The open marketplace can be combined with many open applications.
+            All of tem are dezentral and free to use - you can host them for
+            yourself, of use the Open Cloud to host it.</P
+          >
+        </Column>
+        <Column :width="8">
+          <Row>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -23,6 +23,8 @@
                 </div>
                 <span class="app-name">Marketplace</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -33,6 +35,8 @@
                 </div>
                 <span class="app-name">Shop</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -43,6 +47,8 @@
                 </div>
                 <span class="app-name">Delivery</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -53,6 +59,8 @@
                 </div>
                 <span class="app-name">Chat</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -63,6 +71,8 @@
                 </div>
                 <span class="app-name">Data Marketplace</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -73,6 +83,8 @@
                 </div>
                 <span class="app-name">News</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -83,6 +95,8 @@
                 </div>
                 <span class="app-name">Discount</span>
               </div>
+            </Column>
+            <Column :width="3">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -93,57 +107,34 @@
                 </div>
                 <span class="app-name">Social Network</span>
               </div>
-            </div>
-          </el-col>
-        </el-row>
-      </div>
-    </div>
-  </div>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Container>
+  </Section>
 </template>
 
-<style lang="scss">
-.content {
-  background-color: var(--darker);
-  color: var(--white);
-  padding: 150px 0;
-  @media only screen and (max-width: 1240px) {
-    padding: 130px 50px;
-  }
-  @media only screen and (max-width: 900px) {
-    padding: 100px 30px;
-  }
-  @media only screen and (max-width: 500px) {
-    padding: 80px 20px;
-  }
-}
+<script>
+import Section from "../components/library/layout/Section";
+import Container from "../components/library/layout/Container";
+import Row from "../components/library/layout/Row";
+import Column from "../components/library/layout/Column";
+import H2 from "../components/library/typo/H2";
+import P from "../components/library/typo/P";
 
-h2 {
-  font-size: 64px;
-  text-transform: uppercase;
-  @media only screen and (max-width: 500px) {
-    font-size: 42px;
-  }
-  @media only screen and (max-width: 330px) {
-    font-size: 32px;
-  }
-}
+export default {
+  components: { Section, Container, Row, Column, H2, P }
+};
+</script>
 
-.apps-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  @media only screen and (max-width: 1200px) {
-    margin-top: 50px;
-  }
-}
-
+<style lang="scss" scoped>
 .app-icon-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  width: calc(25% - 25px);
   @media only screen and (max-width: 800px) {
     width: calc(50% - 25px);
   }
