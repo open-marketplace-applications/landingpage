@@ -6,11 +6,18 @@
           <el-col :sm="24" :md="12" :lg="10">
             <h2>Join us</h2>
             <p>
-             Do you also want an Open Marketplace in your City? No Problem! Just join our Discord Chat Server and aks in the #marketplace-request channel for more information. This project is huge and the applications get continuously improved by community feedback. We currently building many decentralized teams all over the world - it's would be cool if you become a part of it and help with any contribution!
+              Do you also want an Open Marketplace in your City? No Problem!
+              Just join our Discord Chat Server and aks in the
+              #marketplace-request channel for more information. This project is
+              huge and the applications get continuously improved by community
+              feedback. We currently building many decentralized teams all over
+              the world - it's would be cool if you become a part of it and help
+              with any contribution!
             </p>
             <h3>Regional Marketplace Leader</h3>
             <p>
-             Manages the Open Marketplace in a city and takes care of the local community.
+              Manages the Open Marketplace in a city and takes care of the local
+              community.
             </p>
             <h3>Contributor</h3>
             <p>
@@ -18,16 +25,28 @@
             </p>
           </el-col>
           <el-col :sm="24" :md="12" :lg="14" class="discord-icon">
-            <a href="https://discord.gg/XDQQcJC" target="_blank">
             <img src="~/assets/icons/discord_large.svg" alt="discord" />
-            </a>
-            <a href="https://discord.gg/XDQQcJC" target="_blank" class="btn btn-primary">Jump right in</a>
+            <Button
+              v-bind:type="'primary'"
+              v-bind:href="'https://discord.gg/XDQQcJC'"
+              v-bind:target="'_blank'"
+            >
+              Jump right in
+            </Button>
           </el-col>
         </el-row>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import Button from "@/components/library/Button";
+
+export default {
+  components: { Button }
+};
+</script>
 
 <style lang="scss" scoped>
 .content {

@@ -1,7 +1,21 @@
 <template>
-  <button v-bind:class="'btn btn-' + type">
-    <slot />
-  </button>
+  <div>
+    <button
+      v-if="href === null"
+      @click="clicked"
+      v-bind:class="'btn btn-' + type"
+    >
+      <slot />
+    </button>
+    <a
+      v-if="href !== null"
+      v-bind:href="href"
+      v-bind:class="'btn btn-' + type"
+      v-bind:target="target"
+    >
+      <slot />
+    </a>
+  </div>
 </template>
 
 <script>
@@ -11,11 +25,19 @@ export default {
     type: {
       type: String,
       default: ""
+    },
+    href: {
+      type: String,
+      default: null
+    },
+    target: {
+      type: String,
+      default: ""
     }
   },
   methods: {
-    onClick() {
-      this.$emit("click!");
+    clicked() {
+      this.$emit("clicked");
     }
   }
 };
