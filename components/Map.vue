@@ -1,53 +1,61 @@
 <template>
-  <div id="map-wrap">
-    <client-only>
-      <l-map
-        :zoom="zoom"
-        :center="center"
-        @update:center="centerUpdated"
-        @update:bounds="boundsUpdated"
-        class="map"
-        scrollWheelZoom="false" 
-      >
-        <!-- <div class="search-wrapper">
-          <div class="icon-wrapper">
-            <img src="@/assets/icons/search.svg" alt="" class="icon" />
-          </div>
-          <input type="text" placeholder="Find your marketplace" />
-        </div> -->
-        <l-tile-layer
-          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-        ></l-tile-layer>
-        <l-marker
-          v-for="(shop, index) in shops"
-          :key="'shop-' + index"
-          :icon="iconShop"
-          :lat-lng="[shop.lat, shop.lon]"
-        >
-          <l-popup>
-            <h3>{{ shop.tags.name }}</h3>
-          </l-popup>
-        </l-marker>
-        <l-marker
-          v-for="(pharmacy, index) in pharmacies"
-          :key="'pharmacy-' + index"
-          :icon="iconShop"
-          :lat-lng="[pharmacy.lat, pharmacy.lon]"
-        >
-          <l-popup>
-            <h3>{{ pharmacy.tags.name }}</h3>
-          </l-popup>
-        </l-marker>
-      </l-map>
-    </client-only>
-  </div>
+  <Section bg="dark">
+    <Container size="fluid">
+      <div id="map-wrap">
+        <client-only>
+          <l-map
+            :zoom="zoom"
+            :center="center"
+            @update:center="centerUpdated"
+            @update:bounds="boundsUpdated"
+            class="map"
+            scroll-wheel-zoom="false"
+          >
+            <!-- <div class="search-wrapper">
+              <div class="icon-wrapper">
+                <img src="@/assets/icons/search.svg" alt="" class="icon" />
+              </div>
+              <input type="text" placeholder="Find your marketplace" />
+            </div> -->
+            <l-tile-layer
+              url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+            ></l-tile-layer>
+            <l-marker
+              v-for="(shop, index) in shops"
+              :key="'shop-' + index"
+              :icon="iconShop"
+              :lat-lng="[shop.lat, shop.lon]"
+            >
+              <l-popup>
+                <h3>{{ shop.tags.name }}</h3>
+              </l-popup>
+            </l-marker>
+            <l-marker
+              v-for="(pharmacy, index) in pharmacies"
+              :key="'pharmacy-' + index"
+              :icon="iconShop"
+              :lat-lng="[pharmacy.lat, pharmacy.lon]"
+            >
+              <l-popup>
+                <h3>{{ pharmacy.tags.name }}</h3>
+              </l-popup>
+            </l-marker>
+          </l-map>
+        </client-only>
+      </div>
+    </Container>
+  </Section>
 </template>
 
 <script>
+// L I B R A R Y
+import Section from "../components/library/layout/Section";
+import Container from "../components/library/layout/Container";
+
 // const iotaAreaCodes = require("@iota/area-codes");
 
 export default {
-  components: {},
+  components: { Section, Container },
   data() {
     return {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
@@ -149,7 +157,6 @@ export default {
     // do we support geolocation
     if (!("geolocation" in navigator)) {
       this.errorStr = "Geolocation is not available.";
-      return;
     } else {
       // // get position from browser
       // navigator.geolocation.getCurrentPosition(
@@ -178,30 +185,17 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #map-wrap {
   height: calc(100vh - 100px);
-  max-height: 100vh;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 50px;
-  background-color: var(--dark);
 }
 
 .map {
   position: relative;
-  z-index: 1000;
-  overflow: hidden;
   height: 100%;
   width: auto !important;
-  margin: 0 50px;
-  margin-top: -150px;
   border-radius: 10px;
   pointer-events: none;
-  @media only screen and (max-width: 500px) {
-    margin: 0 20px;
-    margin-top: -70px;
-  }
 }
 
 .search-wrapper {
