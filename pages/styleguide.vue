@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Page>
     <h1>Styleguide</h1>
     <p>
       Here you can find all components available in
@@ -16,14 +16,15 @@
       <Button v-bind:type="'light'">Light</Button>
       <Button v-bind:type="'white'">White</Button>
     </div>
-  </div>
+  </Page>
 </template>
 
 <script>
+import Page from "../components/library/layout/Page";
 import Button from "../components/library/Button";
 
 export default {
-  components: { Button }
+  components: { Page, Button }
 };
 </script>
 
