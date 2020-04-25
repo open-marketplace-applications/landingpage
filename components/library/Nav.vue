@@ -1,13 +1,13 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="nav">
     <div class="nav__primary">
-      <router-link
+      <nuxt-link
         to="/"
         class="nav-item nav-item--logo"
         exact-active-class="active"
       >
         <img alt="oma logo" class="logo" src="@/assets/logo.svg" />
-      </router-link>
+      </nuxt-link>
       <div @click="navStateOpen = !navStateOpen" class="mobile-btn">
         <div class="mobile-btn__line"></div>
         <div class="mobile-btn__line"></div>
@@ -21,12 +21,12 @@
         <div class="socials">
           <div class="socials__item">
             <a href="https://twitter.com/marketplace_org" target="_blank">
-              <img src="~/assets/icons/twitter_large.svg" alt />
+              <img src="@/assets/icons/twitter_large.svg" alt />
             </a>
           </div>
           <div class="socials__item">
             <a href="https://discord.gg/WdfXseU" target="_blank">
-              <img src="~/assets/icons/discord_large.svg" alt />
+              <img src="@/assets/icons/discord_large.svg" alt />
             </a>
           </div>
           <div class="socials__item">
@@ -34,7 +34,7 @@
               href="https://www.youtube.com/channel/UClTOkIEAwmYLV7SRtMKP9gQ"
               target="_blank"
             >
-              <img src="~/assets/icons/youtube_large.svg" alt />
+              <img src="@/assets/icons/youtube_large.svg" alt />
             </a>
           </div>
         </div>
@@ -71,14 +71,17 @@ export default {
   height: 100px;
   width: 100%;
   z-index: 1001;
+
   .logo {
     height: 50px;
     padding: 0;
     margin: 15px;
   }
+
   .menu {
     display: flex;
     align-items: center;
+
     &__item {
       position: relative;
       display: flex;
@@ -88,18 +91,21 @@ export default {
       margin: 0 10px;
       padding: 15px 30px;
       transition: all 0.3s ease-in-out;
+
       .button-clip {
         height: 7px;
         width: 48px;
         position: absolute;
         bottom: -7px;
         transition: all 0.3s ease-in-out;
+
         &.top {
           bottom: auto;
           top: -7px;
           transform: rotate(180deg);
         }
       }
+
       a {
         color: black;
         font-size: 16px;
@@ -107,20 +113,26 @@ export default {
         text-decoration: none;
         transition: all 0.3s ease-in-out;
       }
+
       &.active {
         background-color: var(--primary);
+
         a {
           color: var(--white);
         }
+
         .button-clip {
           bottom: 0;
+
           &.top {
             top: 0;
           }
         }
       }
+
       &:hover {
         background-color: var(--primary_light);
+
         a {
           filter: invert(100%);
           text-decoration: none;
@@ -128,11 +140,13 @@ export default {
       }
     }
   }
+
   .socials {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
+
     &__item {
       height: 30px;
       width: 30px;
@@ -142,21 +156,23 @@ export default {
       justify-content: center;
       align-items: center;
       margin: 0 2.5px;
+
       a {
         max-height: 20px;
       }
+
       img {
         height: 20px;
         width: 20px;
         transition: all 0.3s ease-in-out;
       }
-      &:hover {
-        img {
-          transform: scale(1.5);
-        }
+
+      &:hover img {
+        transform: scale(1.5);
       }
     }
   }
+
   &__meta {
     position: relative;
     display: flex;
@@ -167,12 +183,14 @@ export default {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
     z-index: 10;
     padding-left: 5px;
+
     .nav-edge {
       position: absolute;
       top: -1px;
       left: -15px;
       height: 15px;
     }
+
     .menu__item {
       height: 28px;
       padding: 0 15px;
@@ -182,16 +200,19 @@ export default {
       align-items: center;
       background-color: var(--primary_0);
       margin: 0 3px;
+
       a {
         background-color: none;
         color: black;
         font-size: 12px;
       }
+
       &:hover {
         cursor: pointer;
       }
     }
   }
+
   &__user {
     position: relative;
     height: 60px;
@@ -203,6 +224,7 @@ export default {
     padding-left: 10px;
     border-radius: 0 0 0 25px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+
     .nav-edge {
       position: absolute;
       top: 0;
@@ -210,15 +232,18 @@ export default {
       height: 30px;
     }
   }
+
   &__primary {
     display: flex;
     width: auto;
     flex-grow: 1;
   }
+
   .mobile-btn {
     display: none;
     cursor: pointer;
   }
+
   &__secondary {
     display: flex;
     flex-direction: column;
@@ -226,118 +251,4 @@ export default {
     width: auto;
   }
 }
-/* @media only screen and (max-width: 720px) {
-  img.logo {
-    height: 50px !important;
-  }
-  .nav {
-    &__primary {
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 80px;
-      .mobile-btn {
-        position: relative;
-        height: 50px;
-        width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-right: 20px;
-        border-radius: 10px;
-        background-color: var(--white);
-        &__line {
-          position: absolute;
-          background-color: var(--dark);
-          border-radius: 2px;
-          height: 3px;
-          width: 20px;
-          transition: all 0.3s ease-in-out;
-          &:nth-child(1) {
-            top: 17px;
-          }
-          &:nth-child(2) {
-            top: 24px;
-            width: 16px;
-          }
-          &:nth-child(3) {
-            bottom: 16px;
-          }
-        }
-      }
-      .menu {
-        display: none;
-      }
-    }
-    &__secondary {
-      height: calc(100vh - 100px);
-      width: 100%;
-      display: none;
-      .nav-edge {
-        display: none;
-      }
-    }
-    &__meta {
-      background-color: transparent;
-      box-shadow: none;
-      flex-direction: column;
-      width: 100%;
-      height: auto;
-      margin-top: 20px;
-      display: none;
-      .menu {
-        flex-direction: column;
-        margin: 0 20px;
-        &__item {
-          width: 100%;
-          background: white;
-          border-radius: 10px;
-          height: 50px;
-          margin: 0 0 20px;
-          box-sizing: border-box;
-          a {
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px;
-          }
-        }
-      }
-    }
-    &__user {
-      display: none;
-    }
-    &.open {
-      height: 100vh;
-      background-color: var(--light);
-      .nav__primary {
-        .mobile-btn {
-          &__line {
-            &:nth-child(1) {
-              top: 24px;
-              transform: rotate(45deg);
-            }
-            &:nth-child(2) {
-              opacity: 0.5;
-              width: 3px;
-            }
-            &:nth-child(3) {
-              transform: rotate(-45deg);
-              bottom: 23px;
-            }
-          }
-        }
-      }
-      .nav__meta {
-        display: flex;
-      }
-      .nav__secondary {
-        display: flex;
-      }
-    }
-  }
-} */
 </style>
