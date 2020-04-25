@@ -3,9 +3,12 @@
     <div class="row footer-bottom">
       <div class="footer-bottom-col">© Online Marketplace Application</div>
       <div class="footer-bottom-col">
-        <router-link to="imprint" class="footer-main-link">Imprint</router-link>
-        <router-link to="privacy" class="footer-main-link"
-          >Privacy Policy</router-link
+        <nuxt-link to="styleguide" class="footer-main-link"
+          >Styleguide</nuxt-link
+        >
+        <nuxt-link to="imprint" class="footer-main-link">Imprint</nuxt-link>
+        <nuxt-link to="privacy" class="footer-main-link"
+          >Privacy Policy</nuxt-link
         >
       </div>
     </div>
