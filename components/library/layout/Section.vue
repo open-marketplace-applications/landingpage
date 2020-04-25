@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div :class="'section ' + bg">
     <slot />
   </div>
 </template>
@@ -7,13 +7,36 @@
 <script>
 export default {
   name: "Section",
-  props: {}
+  props: {
+    bg: {
+      type: String,
+      default: ""
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .section {
-  background-color: var(--darker);
+  width: 100%;
   padding: 50px;
+  &.primary {
+    background-color: var(--primary);
+  }
+  &.darker {
+    background-color: var(--darker);
+  }
+  &.dark {
+    background-color: var(--dark);
+  }
+  &.light {
+    background-color: var(--light);
+  }
+  &.white {
+    background-color: var(--white);
+  }
+  &.gradient-dark {
+    background-image: var(--gradient-dark);
+  }
 }
 </style>
