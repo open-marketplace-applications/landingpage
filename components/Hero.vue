@@ -15,16 +15,9 @@
         <el-col :span="24" :md="12">
           <h1 class="title">Open Marketplace</h1>
           <p>A decentralised marketplace for smart cities</p>
-          <el-button @click="index = 0" class="btn btn-primary"
-            >Watch the Videos</el-button
-          >
-          <Button>Nothing</Button>
-          <Button v-bind:type="'default'">Default</Button>
-          <Button v-bind:type="'primary'">Primary</Button>
-          <Button v-bind:type="'darker'">Darker</Button>
-          <Button v-bind:type="'dark'">Dark</Button>
-          <Button v-bind:type="'light'">Light</Button>
-          <Button v-bind:type="'white'">White</Button>
+          <Button @clicked="index = 0" v-bind:type="'primary'">
+            Watch the Videos
+          </Button>
           <client-only>
             <v-gallery
               :images="images"
