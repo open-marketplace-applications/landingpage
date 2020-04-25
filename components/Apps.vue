@@ -4,9 +4,11 @@
       <div class="container">
         <el-row>
           <el-col :sm="24" :md="24" :lg="8">
-            <h2>Applications</h2>
+            <h2>Apps</h2>
             <p>
-              The open marketplace can be combined with many open applications. All of tem are dezentral and free to use - you can host them for yourself, of use the Open Cloud to host it. 
+              The open marketplace can be combined with many open applications.
+              All of tem are dezentral and free to use - you can host them for
+              yourself, of use the Open Cloud to host it.
             </p>
           </el-col>
           <el-col :sm="24" :md="24" :lg="16">
@@ -130,7 +132,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 100px;
   @media only screen and (max-width: 1200px) {
     margin-top: 50px;
   }
