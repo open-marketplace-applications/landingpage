@@ -1,17 +1,13 @@
 <template>
   <div>
-    <button
-      v-if="href === null"
-      @click="clicked"
-      v-bind:class="'btn btn-' + type"
-    >
+    <button v-if="href === null" @click="clicked" :class="'btn btn-' + type">
       <slot />
     </button>
     <a
       v-if="href !== null"
-      v-bind:href="href"
-      v-bind:class="'btn btn-' + type"
-      v-bind:target="target"
+      :href="href"
+      :class="'btn btn-' + type"
+      :target="target"
     >
       <slot />
     </a>
