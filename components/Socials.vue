@@ -2,13 +2,19 @@
   <div class="socials section">
     <h3>Follow us</h3>
     <div class="socials-list">
-      <a href="https://www.youtube.com/channel/UClTOkIEAwmYLV7SRtMKP9gQ" target="_blank">
+      <a
+        href="https://www.youtube.com/channel/UClTOkIEAwmYLV7SRtMKP9gQ"
+        target="_blank"
+      >
         <img src="~/assets/icons/youtube_large.svg" alt class="social" />
       </a>
       <a href="https://twitter.com/marketplace_org" target="_blank">
         <img src="~/assets/icons/twitter_large.svg" alt class="social" />
       </a>
-      <a href="https://medium.com/open-marketplace-applications" target="_blank">
+      <a
+        href="https://medium.com/open-marketplace-applications"
+        target="_blank"
+      >
         <img src="~/assets/icons/medium.svg" alt class="social" />
       </a>
     </div>
