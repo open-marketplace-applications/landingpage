@@ -71,6 +71,7 @@ export default {
   align-items: center;
   img {
     height: 200px;
+    margin-bottom: 50px;
   }
   @media only screen and (max-width: 992px) {
     margin-top: 50px;
