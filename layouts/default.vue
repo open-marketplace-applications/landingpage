@@ -76,29 +76,6 @@ p {
   --transition: all 0.3s ease-in-out;
 }
 
-.btn {
-  font-size: 14px;
-  font-weight: var(--weight-bold);
-  padding: 16px 32px;
-  height: auto;
-  margin-top: 30px;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: var(--transition);
-  text-decoration: none;
-  cursor: pointer;
-  &-primary {
-    color: var(--white);
-    background-color: var(--primary);
-    &:hover {
-      color: var(--white);
-      background-color: var(--primary-light);
-    }
-  }
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
