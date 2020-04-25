@@ -1,6 +1,6 @@
 <template>
   <Page>
-    <Section>
+    <Section :bg="'gradient-dark'">
       <Container :size="'sm'">
         <H1>Styleguide</H1>
         <P
@@ -66,3 +66,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.section {
+  min-height: 100vh;
+}
+</style>
