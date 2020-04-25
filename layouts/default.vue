@@ -16,37 +16,6 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
 
-html {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-}
-
-h1,
-h2,
-h3,
-button {
-  font-weight: 800;
-}
-
-p {
-  line-height: 1.5;
-}
-
 :root {
   --primary: #4cb6c2;
   --primary-light: #7fc7bd;
@@ -76,16 +45,34 @@ p {
   --transition: all 0.3s ease-in-out;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  @media only screen and (max-width: 1240px) {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+button {
+  font-weight: 800;
+}
+
+// S C R O L L B A R
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
