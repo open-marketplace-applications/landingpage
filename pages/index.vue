@@ -3,6 +3,7 @@
     <Hero />
     <Map />
     <Apps />
+    <Marketplaces />
     <JoinUs />
     <Socials />
     <Footer />
@@ -18,6 +19,7 @@ import Page from "@/components/library/layout/Page";
 import Hero from "@/components/sections/Hero";
 import Map from "@/components/sections/Map.vue";
 import Apps from "@/components/sections/Apps.vue";
+import Marketplaces from "@/components/sections/Marketplaces.vue";
 import JoinUs from "@/components/sections/JoinUs.vue";
 import Socials from "@/components/sections/Socials";
 
@@ -27,6 +29,7 @@ export default {
     Hero,
     Map,
     Apps,
+    Marketplaces,
     JoinUs,
     Socials,
     Footer
