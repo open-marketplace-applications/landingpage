@@ -3,9 +3,12 @@
     <div class="row footer-bottom">
       <div class="footer-bottom-col">© Online Marketplace Application</div>
       <div class="footer-bottom-col">
-        <router-link to="imprint" class="footer-main-link">Imprint</router-link>
-        <router-link to="privacy" class="footer-main-link"
-          >Privacy Policy</router-link
+        <nuxt-link to="styleguide" class="footer-main-link"
+          >Styleguide</nuxt-link
+        >
+        <nuxt-link to="imprint" class="footer-main-link">Imprint</nuxt-link>
+        <nuxt-link to="privacy" class="footer-main-link"
+          >Privacy Policy</nuxt-link
         >
       </div>
     </div>
@@ -76,7 +79,7 @@
       }
     }
     .footer-main-link {
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--light);
       text-decoration: none;
       transition: color 200ms ease-in-out;
       &:hover {
@@ -147,10 +150,10 @@
 }
 @media only screen and (max-width: 360px) {
   .footer {
-    padding: 30px 30px 0;
+    padding: 0;
     .row.footer-bottom {
       margin: 0 -30px;
-      padding: 15px 30px;
+      padding: 15px;
     }
   }
 }

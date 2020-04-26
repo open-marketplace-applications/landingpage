@@ -1,20 +1,67 @@
 <template>
   <div>
-    <NavBar />
+    <Nav />
     <nuxt />
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+import Nav from "@/components/library/Nav";
 
 export default {
-  components: { NavBar }
+  components: { Nav }
 };
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
+
+:root {
+  // Primary Colour
+  --primary: #4cb6c2;
+  --primary-light: #7fc7bd;
+  --gradient-primary: linear-gradient(
+    to right bottom,
+    #7fc7bd,
+    #73c3be,
+    #66bfbf,
+    #59bac0,
+    #4cb6c2
+  );
+
+  // Dark Mode
+  --white-fix: #ffffff;
+  --light-fix: #edf7f2;
+  --white: #ffffff;
+  --light: #edf7f2;
+  --dark: #193f43;
+  --darker: #122b2e;
+  --gradient-dark: linear-gradient(
+    to right bottom,
+    #193f43,
+    #183038,
+    #172229,
+    #121419,
+    #020202
+  );
+
+  // Light Mode
+  /* --white: #122b2e;
+  --light: #193f43;
+  --dark: #edf7f2;
+  --darker: #ffffff;
+  --gradient-dark: linear-gradient(to right bottom, #ffffff, #edf7f2); */
+
+  // Variables
+  --weight-bold: 800;
+  --weight-regular: 400;
+  --radius: 10px;
+  --transition: all 0.3s ease-in-out;
+  --media-lg: 1200px;
+  --media-md: 900px;
+  --media-sm: 600px;
+  --media-xs: 400px;
+}
 
 html {
   font-family: "Open Sans", sans-serif;
@@ -43,72 +90,7 @@ button {
   font-weight: 800;
 }
 
-p {
-  line-height: 1.5;
-}
-
-:root {
-  --primary: #4cb6c2;
-  --primary-light: #7fc7bd;
-  --white: #ffffff;
-  --light: #edf7f2;
-  --dark: #193f43;
-  --darker: #122b2e;
-  --gradient-dark: linear-gradient(
-    to right bottom,
-    #193f43,
-    #183038,
-    #172229,
-    #121419,
-    #020202
-  );
-  --gradient-primary: linear-gradient(
-    to right bottom,
-    #7fc7bd,
-    #73c3be,
-    #66bfbf,
-    #59bac0,
-    #4cb6c2
-  );
-  --weight-bold: 800;
-  --weight-regular: 400;
-  --radius: 10px;
-  --transition: all 0.3s ease-in-out;
-}
-
-.btn {
-  font-size: 14px;
-  font-weight: var(--weight-bold);
-  padding: 16px 32px;
-  height: auto;
-  margin-top: 30px;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: var(--transition);
-  text-decoration: none;
-  cursor: pointer;
-  &-primary {
-    color: var(--white);
-    background-color: var(--primary);
-    &:hover {
-      color: var(--white);
-      background-color: var(--primary-light);
-    }
-  }
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  @media only screen and (max-width: 1240px) {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-}
-
+// S C R O L L B A R
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
