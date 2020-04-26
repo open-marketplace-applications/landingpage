@@ -40,7 +40,7 @@ export default {
     background-image: var(--gradient-dark);
   }
   @media only screen and (max-width: 400px) {
-    padding: 10px;
+    padding: 20px;
   }
 }
 </style>

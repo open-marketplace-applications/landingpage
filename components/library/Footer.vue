@@ -150,10 +150,10 @@
 }
 @media only screen and (max-width: 360px) {
   .footer {
-    padding: 30px 30px 0;
+    padding: 0;
     .row.footer-bottom {
       margin: 0 -30px;
-      padding: 15px 30px;
+      padding: 15px;
     }
   }
 }

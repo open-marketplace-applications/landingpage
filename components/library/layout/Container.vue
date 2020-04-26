@@ -31,8 +31,8 @@ export default {
   &.xs {
     max-width: 600px;
   }
-  @media only screen and (max-width: 1240px) {
-    padding: 0 20px;
+  @media only screen and (max-width: 400px) {
+    margin: 20px auto;
   }
 }
 </style>

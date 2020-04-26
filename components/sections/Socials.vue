@@ -40,6 +40,9 @@ export default {
 <style lang="scss" scoped>
 h2 {
   margin-bottom: 50px;
+  @media only screen and (max-width: 450px) {
+    margin-bottom: 20px;
+  }
 }
 .container {
   display: flex;
