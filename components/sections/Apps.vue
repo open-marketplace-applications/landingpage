@@ -2,7 +2,7 @@
   <Section>
     <Container>
       <Row>
-        <Column :width="4">
+        <Column v-bind:width="4">
           <H2>Apps</H2>
           <P
             >The open marketplace can be combined with many open applications.
@@ -12,7 +12,7 @@
         </Column>
         <Column :width="8">
           <Row>
-            <Column :width="3">
+            <Column :width="3" :justify="'center'" :align="'center'">
               <div class="app-icon-container">
                 <div class="app-icon-wrapper">
                   <img
@@ -116,12 +116,12 @@
 </template>
 
 <script>
-import Section from "../components/library/layout/Section";
-import Container from "../components/library/layout/Container";
-import Row from "../components/library/layout/Row";
-import Column from "../components/library/layout/Column";
-import H2 from "../components/library/typo/H2";
-import P from "../components/library/typo/P";
+import Section from "@/components/library/layout/Section";
+import Container from "@/components/library/layout/Container";
+import Row from "@/components/library/layout/Row";
+import Column from "@/components/library/layout/Column";
+import H2 from "@/components/library/typo/H2";
+import P from "@/components/library/typo/P";
 
 export default {
   components: { Section, Container, Row, Column, H2, P }

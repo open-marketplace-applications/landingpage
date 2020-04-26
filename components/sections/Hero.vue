@@ -3,12 +3,12 @@
     <Container>
       <div class="hero">
         <img
-          :src="require(`../assets/welcome.svg`)"
+          :src="require(`../../assets/welcome.svg`)"
           alt="Welcome"
           class="welcome"
         />
         <img
-          :src="require(`../assets/hero-illustration.png`)"
+          :src="require(`../../assets/hero-illustration.png`)"
           alt="Hero Illustration"
           class="illustration"
         />
@@ -49,7 +49,13 @@ import P from "@/components/library/typo/P";
 import Button from "@/components/library/Button";
 
 export default {
-  components: { Section, Container, H1, P, Button },
+  components: {
+    Section,
+    Container,
+    H1,
+    P,
+    Button
+  },
   data() {
     return {
       images: [

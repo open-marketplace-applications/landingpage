@@ -49,8 +49,8 @@
 
 <script>
 // L I B R A R Y
-import Section from "../components/library/layout/Section";
-import Container from "../components/library/layout/Container";
+import Section from "@/components/library/layout/Section";
+import Container from "@/components/library/layout/Container";
 
 // const iotaAreaCodes = require("@iota/area-codes");
 
