@@ -13,100 +13,84 @@
         <Column :width="8">
           <Row>
             <Column :width="3" :justify="'center'" :align="'center'">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/marketplace.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Marketplace</span>
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/marketplace.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Marketplace</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/shop-app.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Shop</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/shop-app.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Shop</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/delivery.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Delivery</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/delivery.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Delivery</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/chat.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Chat</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/chat.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Chat</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/data-marketplace.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Data Marketplace</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/data-marketplace.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Data Marketplace</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/news.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">News</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/news.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">News</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/discount.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Discount</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/discount.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Discount</span>
             </Column>
-            <Column :width="3">
-              <div class="app-icon-container">
-                <div class="app-icon-wrapper">
-                  <img
-                    src="~assets/icons/social-network.svg"
-                    alt="shop icon"
-                    class="app-icon"
-                  />
-                </div>
-                <span class="app-name">Social Network</span>
+            <Column :width="3" :justify="'center'" :align="'center'">
+              <div class="app-icon-wrapper">
+                <img
+                  src="~assets/icons/social-network.svg"
+                  alt="shop icon"
+                  class="app-icon"
+                />
               </div>
+              <span class="app-name">Social Network</span>
             </Column>
           </Row>
         </Column>
@@ -129,37 +113,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-icon-container {
+.app-icon-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  @media only screen and (max-width: 800px) {
-    width: calc(50% - 25px);
+  height: 150px;
+  width: 150px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  .app-icon {
+    max-height: 80px;
+    max-width: 80px;
   }
-  @media only screen and (max-width: 440px) {
-    width: 100%;
-  }
+}
 
-  .app-icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 150px;
-    background-color: var(--white);
-    border-radius: var(--radius);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-    margin-bottom: 10px;
-    .app-icon {
-      max-height: 80px;
-      max-width: 80px;
-    }
-  }
-
-  .app-name {
-    font-weight: var(--weight-bold);
-  }
+.app-name {
+  text-align: center;
+  font-weight: var(--weight-bold);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="'col col-' + width">
+  <div :class="'col col-' + width + ' justify-' + justify + ' align-' + align">
     <slot />
   </div>
 </template>
@@ -11,6 +11,14 @@ export default {
     width: {
       type: Number,
       default: 12
+    },
+    justify: {
+      type: String,
+      default: "flex-start"
+    },
+    align: {
+      type: String,
+      default: "flex-start"
     }
   }
 };
@@ -23,6 +31,12 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0 15px 30px;
+  &.justify-center {
+    justify-content: center;
+  }
+  &.align-center {
+    align-items: center;
+  }
   &-1 {
     width: calc(100% * (1 / 12) - 30px);
   }
