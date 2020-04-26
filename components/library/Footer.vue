@@ -79,7 +79,7 @@
       }
     }
     .footer-main-link {
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--light);
       text-decoration: none;
       transition: color 200ms ease-in-out;
       &:hover {

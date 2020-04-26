@@ -40,10 +40,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.btn {
+.btn,
+a.btn {
   font-size: 14px;
   font-weight: var(--weight-bold);
-  padding: 16px 32px;
+  padding: 14px 32px;
   height: auto;
   margin-top: 30px;
   outline: none;
@@ -61,7 +62,7 @@ export default {
   &-dark,
   &-darker,
   &-primary {
-    color: var(--white);
+    color: var(--white-fix);
   }
 
   &-white,

@@ -76,6 +76,8 @@ export default {
     height: 50px;
     padding: 0;
     margin: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
   }
 
   .menu {
@@ -151,7 +153,7 @@ export default {
       height: 30px;
       width: 30px;
       border-radius: 5px;
-      background-color: var(--light);
+      background-color: var(--light-fix);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -178,9 +180,9 @@ export default {
     display: flex;
     background-color: transparent;
     height: 40px;
-    background-color: var(--white);
+    background-color: var(--white-fix);
     border-radius: 0 0 0 10px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
     z-index: 10;
     padding-left: 5px;
 
