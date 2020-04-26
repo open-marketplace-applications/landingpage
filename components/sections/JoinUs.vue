@@ -2,7 +2,7 @@
   <Section :bg="'dark'">
     <Container>
       <Row>
-        <Column :width="6">
+        <Column :width="6" :md="12">
           <H2>Join us</H2>
           <P>
             Do you also want an Open Marketplace in your City? No Problem! Just
@@ -23,7 +23,7 @@
             >They help to improve the project with contributions of any kind.</P
           >
         </Column>
-        <Column :width="6" class="discord-icon">
+        <Column :width="6" :md="12" class="discord-icon">
           <img src="~/assets/icons/discord_large.svg" alt="discord" />
           <Button
             :type="'primary'"
@@ -70,7 +70,7 @@ export default {
     height: 200px;
     margin-bottom: 50px;
   }
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 920px) {
     margin-top: 50px;
   }
 }

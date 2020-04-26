@@ -2,7 +2,7 @@
   <Section>
     <Container>
       <Row>
-        <Column v-bind:width="4">
+        <Column v-bind:width="4" :lg="12">
           <H2>Apps</H2>
           <P
             >The open marketplace can be combined with many open applications.
@@ -10,12 +10,15 @@
             yourself, of use the Open Cloud to host it.</P
           >
         </Column>
-        <Column :width="8">
+        <Column :width="8" :lg="12">
           <Row>
             <Column
               v-for="(app, index) in apps"
               :key="index"
               :width="3"
+              :md="4"
+              :sm="6"
+              :xs="12"
               :justify="'center'"
               :align="'center'"
             >
@@ -44,7 +47,14 @@ import H2 from "@/components/library/typo/H2";
 import P from "@/components/library/typo/P";
 
 export default {
-  components: { Section, Container, Row, Column, H2, P },
+  components: {
+    Section,
+    Container,
+    Row,
+    Column,
+    H2,
+    P
+  },
   data() {
     return {
       apps: [
@@ -93,10 +103,11 @@ export default {
   align-items: center;
   height: 150px;
   width: 150px;
-  background-color: var(--white);
+  background-color: var(--white-fix);
   border-radius: var(--radius);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
   margin-bottom: 10px;
+
   .app-icon {
     max-height: 80px;
     max-width: 80px;
@@ -104,6 +115,7 @@ export default {
 }
 
 .app-name {
+  font-size: 12px;
   text-align: center;
   font-weight: var(--weight-bold);
 }
