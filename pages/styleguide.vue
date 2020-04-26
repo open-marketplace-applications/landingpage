@@ -8,7 +8,7 @@
           open-marketplace/landing-page</P
         >
         <Hr />
-        <H2>Buttons</H2>
+        <H2>Button</H2>
         <P
           >The button component allows you use it as a button with @clicked or
           as a link with href.</P
