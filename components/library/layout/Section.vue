@@ -20,6 +20,7 @@ export default {
 .section {
   width: 100%;
   padding: 50px;
+  overflow: hidden;
   &.primary {
     background-color: var(--primary);
   }
@@ -37,6 +38,9 @@ export default {
   }
   &.gradient-dark {
     background-image: var(--gradient-dark);
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 10px;
   }
 }
 </style>

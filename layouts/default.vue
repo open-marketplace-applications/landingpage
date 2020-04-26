@@ -43,6 +43,10 @@ export default {
   --weight-regular: 400;
   --radius: 10px;
   --transition: all 0.3s ease-in-out;
+  --media-lg: 1200px;
+  --media-md: 900px;
+  --media-sm: 600px;
+  --media-xs: 400px;
 }
 
 html {

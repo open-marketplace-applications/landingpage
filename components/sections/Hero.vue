@@ -93,6 +93,16 @@ export default {
   height: 100vh;
 }
 
+.container {
+  margin-top: 22%;
+  @media only screen and (max-width: 500px) {
+    margin-top: 24%;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-top: 26%;
+  }
+}
+
 .welcome {
   position: absolute;
   top: 100px;
@@ -113,17 +123,9 @@ export default {
     width: 400px;
   }
   @media only screen and (max-width: 400px) {
-    width: 300px;
-  }
-}
-
-.container {
-  margin-top: 22%;
-  @media only screen and (max-width: 500px) {
-    margin-top: 24%;
-  }
-  @media only screen and (max-width: 400px) {
-    margin-top: 26%;
+    width: 90%;
+    bottom: 20px;
+    right: 20px;
   }
 }
 
