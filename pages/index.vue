@@ -17,7 +17,7 @@ import Page from "@/components/library/layout/Page";
 
 // S E C T I O N S
 import Hero from "@/components/sections/Hero";
-import Map from "@/components/sections/Map.vue";
+import Map from "@/components/sections/map/Map.vue";
 import Apps from "@/components/sections/Apps.vue";
 import Marketplaces from "@/components/sections/Marketplaces.vue";
 import JoinUs from "@/components/sections/JoinUs.vue";
