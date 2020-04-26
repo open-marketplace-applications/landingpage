@@ -17,8 +17,21 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
 
 :root {
+  // Primary Colour
   --primary: #4cb6c2;
   --primary-light: #7fc7bd;
+  --gradient-primary: linear-gradient(
+    to right bottom,
+    #7fc7bd,
+    #73c3be,
+    #66bfbf,
+    #59bac0,
+    #4cb6c2
+  );
+
+  // Dark Mode
+  --white-fix: #ffffff;
+  --light-fix: #edf7f2;
   --white: #ffffff;
   --light: #edf7f2;
   --dark: #193f43;
@@ -31,14 +44,15 @@ export default {
     #121419,
     #020202
   );
-  --gradient-primary: linear-gradient(
-    to right bottom,
-    #7fc7bd,
-    #73c3be,
-    #66bfbf,
-    #59bac0,
-    #4cb6c2
-  );
+
+  // Light Mode
+  /* --white: #122b2e;
+  --light: #193f43;
+  --dark: #edf7f2;
+  --darker: #ffffff;
+  --gradient-dark: linear-gradient(to right bottom, #ffffff, #edf7f2); */
+
+  // Variables
   --weight-bold: 800;
   --weight-regular: 400;
   --radius: 10px;
