@@ -25,7 +25,7 @@
             </a>
           </div>
           <div class="socials__item">
-            <a href="https://discord.gg/WdfXseU" target="_blank">
+            <a href="https://discord.gg/XDQQcJC" target="_blank">
               <img src="@/assets/icons/discord_large.svg" alt />
             </a>
           </div>
