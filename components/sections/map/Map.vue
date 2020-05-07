@@ -14,7 +14,7 @@
             id="map"
           >
             <Search />
-            <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+            <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
             <l-marker
               v-for="(shop, index) in shops"
               :key="'shop-' + index"
@@ -55,6 +55,8 @@ export default {
   data() {
     return {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+      attribution:
+        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       zoom: 16,
       center: [52.529797, 13.413094],
       bounds: null,
