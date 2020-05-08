@@ -37,6 +37,14 @@
               <img src="@/assets/icons/youtube_large.svg" alt />
             </a>
           </div>
+          <div class="socials__item">
+            <a
+              href="https://medium.com/open-marketplace-applications"
+              target="_blank"
+            >
+              <img src="@/assets/icons/medium.svg" alt />
+            </a>
+          </div>
         </div>
       </div>
     </div>
