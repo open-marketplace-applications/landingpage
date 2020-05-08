@@ -18,6 +18,12 @@
         >
           <img src="~/assets/icons/medium.svg" alt class="social" />
         </a>
+        <a
+          href="https://github.com/open-marketplace-applications"
+          target="_blank"
+        >
+          <img src="~/assets/icons/github.svg" alt class="social" />
+        </a>
       </div>
     </Container>
   </Section>
