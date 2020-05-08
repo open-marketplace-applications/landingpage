@@ -16,5 +16,8 @@ export default {
   background-color: var(--darker);
   color: var(--white);
   min-height: 100vh;
+  @media only screen and (max-width: 400px) {
+    padding-top: 50px;
+  }
 }
 </style>
