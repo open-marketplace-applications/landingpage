@@ -5,10 +5,10 @@
         <Column v-bind:width="4" :lg="12">
           <H2>Apps</H2>
           <P
-            >The open marketplace can be combined with many open applications.
-            All of tem are dezentral and free to use - you can host them for
-            yourself, of use the Open Cloud to host it.</P
-          >
+            >We provide many free open source applications for smart cities and
+            communities. We leave it up to you if you want to be your own
+            platform provider, by hosting them on your own infrastructure.
+          </P>
         </Column>
         <Column :width="8" :lg="12">
           <Row>

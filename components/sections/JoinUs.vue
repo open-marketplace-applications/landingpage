@@ -6,21 +6,25 @@
           <H2>Join us</H2>
           <P>
             Do you also want an Open Marketplace in your City? No Problem! Just
-            join our Discord Chat Server and aks in the #marketplace-request
-            channel for more information. This project is huge and the
-            applications get continuously improved by community feedback. We
-            currently building many decentralized teams all over the world -
-            it's would be cool if you become a part of it and help with any
-            contribution!
+            join our Discord Chat Server and drop us a line in the
+            #marketplace-request channel. This project is huge and just started.
+            The applications get continuously improved by your feedback and the
+            efforts of the team. We are currently building many decentralized
+            teams all over the globe - hope to see you join in soon.
           </P>
-          <h3>Regional Marketplace Leader</h3>
+          <h3>Local Leader</h3>
           <P
-            >Manages the Open Marketplace in a city and takes care of the local
-            community.</P
-          >
+            >As a Local Leader you manage the Open Marketplace in your city and
+            take care of the local community. Read more
+            <a
+              href="https://github.com/open-marketplace-applications/community/tree/master/local-leaders"
+              >here</a
+            >.
+          </P>
           <h3>Contributor</h3>
           <P
-            >They help to improve the project with contributions of any kind.</P
+            >As a contributor you help us improve the project with contributions
+            of any kind.</P
           >
         </Column>
         <Column :width="6" :md="12" class="discord-icon">

@@ -88,6 +88,11 @@ button {
   font-weight: 800;
 }
 
+a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
 // S C R O L L B A R
 /* width */
 ::-webkit-scrollbar {
