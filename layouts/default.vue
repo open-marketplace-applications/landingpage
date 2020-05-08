@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap");
 
 :root {
   // Primary Colour
