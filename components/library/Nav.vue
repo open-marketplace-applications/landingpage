@@ -45,6 +45,14 @@
               <img src="@/assets/icons/medium.svg" alt />
             </a>
           </div>
+          <div class="socials__item">
+            <a
+              href="https://github.com/open-marketplace-applications"
+              target="_blank"
+            >
+              <img src="@/assets/icons/github.svg" alt />
+            </a>
+          </div>
         </div>
       </div>
     </div>
