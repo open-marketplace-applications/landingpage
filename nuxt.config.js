@@ -14,10 +14,18 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "A free and feeless marketplace for a smart city - Connect sellers, delivery services & consumers"
+        content:
+          "A free and feeless marketplace for a smart city - Connect sellers, delivery services & consumers"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap"
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -26,7 +34,10 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["element-ui/lib/theme-chalk/index.css", "leaflet-control-geocoder/dist/Control.Geocoder.css"],
+  css: [
+    "element-ui/lib/theme-chalk/index.css",
+    "leaflet-control-geocoder/dist/Control.Geocoder.css"
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -34,7 +45,7 @@ module.exports = {
     "@/plugins/element-ui",
     "@/plugins/vue-scrollto.js",
     "@/plugins/vue-gallery.client.js",
-    { src: '~/plugins/solid', ssr: false },
+    { src: "~/plugins/solid", ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -89,6 +100,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { }
+    extend(config, ctx) {}
   }
 };
