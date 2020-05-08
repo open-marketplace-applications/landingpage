@@ -63,15 +63,15 @@ h2 {
       margin: 0 25px;
       @media only screen and (max-width: 520px) {
         margin: 0 20px;
-        width: 100px;
+        width: 80px;
       }
       @media only screen and (max-width: 450px) {
         margin: 0 15px;
-        width: 80px;
+        width: 60px;
       }
       @media only screen and (max-width: 350px) {
         margin: 0 10px;
-        width: 60px;
+        width: 50px;
       }
     }
   }
