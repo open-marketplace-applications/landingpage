@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 62px;
   line-height: 1.15;
