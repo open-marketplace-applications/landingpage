@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="row footer-bottom">
-      <div class="footer-bottom-col">© Online Marketplace Application</div>
+      <div class="footer-bottom-col">© Online Marketplace Applications</div>
       <div class="footer-bottom-col">
         <nuxt-link to="imprint" class="footer-main-link">Imprint</nuxt-link>
         <nuxt-link to="privacy" class="footer-main-link"
