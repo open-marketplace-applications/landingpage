@@ -28,7 +28,8 @@
     "nuxt-i18n": "^6.6.1",
     "nuxt-leaflet": "0.0.21",
     "vue-gallery": "^2.0.1",
-    "vue-scrollto": "^2.17.1",
+    "vue-scroll-reveal": "^1.0.11",
+    "vue-scrollto": "^2.19.1",
     "vue-solid-plugin": "^0.6.0"
   },
   "devDependencies": {

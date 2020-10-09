@@ -45,7 +45,8 @@ module.exports = {
     "@/plugins/element-ui",
     "@/plugins/vue-scrollto.js",
     "@/plugins/vue-gallery.client.js",
-    { src: "~/plugins/solid", ssr: false }
+    { src: "~/plugins/solid", ssr: false },
+    { src: '~/plugins/vue-scroll-reveal', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -60,7 +61,8 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
     "nuxt-i18n",
-    "nuxt-leaflet"
+    "nuxt-leaflet",
+    ['vue-scrollto/nuxt', { duration: 300 }],
   ],
   i18n: {
     locales: [
