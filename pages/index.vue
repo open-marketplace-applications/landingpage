@@ -27,7 +27,7 @@ export default {
   components: {
     Page,
     Hero,
-    Map,
+    // Map,
     Apps,
     Marketplaces,
     JoinUs,
