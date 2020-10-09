@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Online Marketplace Applications",
+    title: "Open Marketplace Applications",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -15,7 +15,7 @@ module.exports = {
         hid: "description",
         name: "description",
         content:
-          "A free and feeless marketplace for a smart city - Connect sellers, delivery services & consumers"
+          "Open marketplace apps are decentralized open source apps for smart cities and local communities."
       }
     ],
     link: [
