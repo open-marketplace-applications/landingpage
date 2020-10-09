@@ -18,8 +18,8 @@
         <div class="image-overlay"></div>
         <div class="content-wrapper">
           <H2>{{ marketplace.name }}</H2>
-          <Button :type="'dark'" :href="marketplace.url" :target="'_blank'"
-            >Discover</Button
+          <Button :type="'dark'" :href="marketplace.url"
+            >{{ marketplace.button_text }}</Button
           >
         </div>
       </div>
@@ -45,22 +45,26 @@ export default {
         {
           name: "Berlin",
           image: "berlin",
-          url: "http://berlin.openmarketplace.org"
+          url: "",
+          button_text: "Coming Soon"
         },
         {
           name: "Südtirol",
           image: "südtirol",
-          url: "http://suedtirol.openmarketplace.org"
+          url: "",
+          button_text: "Coming Soon"
         },
         {
           name: "Saarbrücken",
           image: "saarbrücken",
-          url: "http://saarbruecken.openmarketplace.org"
+          url: "",
+          button_text: "Coming Soon"
         },
         {
-          name: "Homburg",
+          name: "Your City",
           image: "homburg",
-          url: "http://homburg.openmarketplace.org"
+          url: "mailto:info@openmarketplace.org?subject=[CITYREQUEST]",
+          button_text: "Contact Us Now"
         }
       ]
     };
@@ -125,6 +129,7 @@ export default {
     align-items: center;
   }
 
+
   &:hover {
     .content-wrapper {
       top: 0;
@@ -165,4 +170,5 @@ h2 {
     width: 100%;
   }
 }
+
 </style>

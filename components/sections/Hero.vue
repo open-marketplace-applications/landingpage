@@ -15,10 +15,13 @@
         <el-row>
           <el-col :span="24" :md="12">
             <H1>Open Marketplace</H1>
-            <P>A decentralised marketplace for smart cities</P>
-            <Button @clicked="index = 0" :type="'primary'">
-              Watch the Videos
+            <P>The framework for a free and feeless marketplace for local communities and smart cities.</P>
+            <a href="" @click.prevent="index = 0" >Watch the Videos</a>
+            <Button v-scroll-to="'#apps'" :type="'primary'">
+              Discover more
             </Button>
+              <section v-scroll-reveal.reset>
+              </section>
             <client-only>
               <v-gallery
                 :images="images"
@@ -60,19 +63,19 @@ export default {
     return {
       images: [
         {
+          title: "Open Marketplace Applications - An Decentralized Marketplace",
+          href: "https://www.youtube.com/watch?v=H8EGEsW5eDY",
+          type: "text/mp4",
+          youtube: "H8EGEsW5eDY",
+          poster: "https://img.youtube.com/vi/H8EGEsW5eDY/maxresdefault.jpg"
+        },
+        {
           title:
             "Open Marketplace Applications - Introduction - Connect sellers, delivery services & consumers",
           href: "https://www.youtube.com/watch?v=Jbj4iwSlKZY&t",
           type: "text/mp4",
           youtube: "Jbj4iwSlKZY",
           poster: "https://img.youtube.com/vi/Jbj4iwSlKZY/maxresdefault.jpg"
-        },
-        {
-          title: "Open Marketplace Applications - An Decentralized Marketplace",
-          href: "https://www.youtube.com/watch?v=H8EGEsW5eDY",
-          type: "text/mp4",
-          youtube: "H8EGEsW5eDY",
-          poster: "https://img.youtube.com/vi/H8EGEsW5eDY/maxresdefault.jpg"
         },
         {
           title: "Open Marketplace - First Open Platform as a Platform",
@@ -84,6 +87,11 @@ export default {
       ],
       index: null
     };
+  },
+  methods: {
+    scroll() {
+      console.log("sdsd")
+    }
   }
 };
 </script>

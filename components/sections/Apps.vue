@@ -1,6 +1,6 @@
 <template>
-  <Section>
-    <Container>
+  <Section id="apps">
+    <Container v-scroll-reveal.reset>
       <Row>
         <Column v-bind:width="4" :lg="12">
           <H2>Apps</H2>

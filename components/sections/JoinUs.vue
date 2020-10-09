@@ -1,5 +1,5 @@
 <template>
-  <Section :bg="'dark'">
+  <Section id="join_us" :bg="'dark'">
     <Container>
       <Row>
         <Column :width="6" :md="12">
@@ -15,11 +15,7 @@
           <h3>Local Leader</h3>
           <P
             >As a Local Leader you manage the Open Marketplace in your city and
-            take care of the local community. Read more
-            <a
-              href="https://github.com/open-marketplace-applications/community/tree/master/local-leaders"
-              >here</a
-            >.
+            take care of the local community.
           </P>
           <h3>Contributor</h3>
           <P
