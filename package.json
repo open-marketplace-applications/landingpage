@@ -24,7 +24,7 @@
     "element-ui": "^2.4.11",
     "express": "^4.16.4",
     "leaflet-control-geocoder": "^1.13.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.6.1",
     "nuxt-leaflet": "0.0.21",
     "vue-gallery": "^2.0.1",
