@@ -22,7 +22,7 @@
     "babel-eslint": "^10.1.0",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "leaflet-control-geocoder": "^1.13.0",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.6.1",
